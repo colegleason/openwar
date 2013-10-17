@@ -1,7 +1,7 @@
 #include "scene.h"
 
 Marker Scene::addTrackingMarker(Marker marker) {
-    this.markers.push_back(marker);
+    this.marker = marker;
     return marker;
 }
 

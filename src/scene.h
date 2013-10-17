@@ -8,6 +8,6 @@ class Scene {
     bool activate();
     bool deactivate();
  private:
-    vector<Marker> markers;
+    Marker marker;
     bool active = false;
 };

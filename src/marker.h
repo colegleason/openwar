@@ -10,7 +10,7 @@ class Marker {
    void scale(float scaleAmount);
    void rotate(float angle);
  private:
-    enum type { TYPE1, TYPE2 };
+   enum type { AR_MARKER, QR_CODE, IMAGE };
     void *trackingData;
     vector<Model> models;
 };
