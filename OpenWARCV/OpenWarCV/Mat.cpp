@@ -42,10 +42,3 @@ int Mat::rows() {
 int Mat::cols() {
 
 }
-
-/** 
-*computes the inverse of the matrix
-*/
-Mat Mat::inv(){
-
-}

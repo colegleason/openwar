@@ -38,9 +38,4 @@ public:
 	*get number of columns
 	*/
 	int cols();
-
-	/** 
-	*computes the inverse of the matrix
-	*/
-	Mat inv();
 };

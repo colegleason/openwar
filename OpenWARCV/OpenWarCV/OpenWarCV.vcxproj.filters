@@ -16,5 +16,6 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Mat.h" />
     <ClInclude Include="core.h" />
+    <ClInclude Include="mat_ops.h" />
   </ItemGroup>
 </Project>
