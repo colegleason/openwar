@@ -7,7 +7,7 @@ public:
 	typedef vector<double> Row;
 
 private:
-	vector<Row> rows;
+	vector<Row> rowData;
 
 public:
 	/**
@@ -23,12 +23,12 @@ public:
 	/**
 	*create matrix from 2d byte array
 	*/
-	Mat(char** b, int r, int c);
+	Mat(char* b, int r, int c);
 
 	/**
 	*access in row, column format with []
 	*/
-	Row& Mat::operator[](Mat m); 
+	Row& Mat::operator[](int r); 
 
 	/**
 	*get number of rows
@@ -38,4 +38,10 @@ public:
 	*get number of columns
 	*/
 	int cols();
+
+private:
+	/**
+	*resizes matrix to rxc
+	*/
+	void init(int r, int c);
 };
