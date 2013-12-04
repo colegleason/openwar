@@ -1,7 +1,7 @@
 #pragma once
 #include "Mat.h"
 
-namespace Matops{
+namespace MatOps{
 
 /**
 *sum of squard difference (distance metric)
@@ -15,6 +15,26 @@ double ssd(Mat& a, Mat& b, int x = 0, int y = 0);
 *may pass in nil to disregaurd certian results
 */
 void svd(Mat& a, Mat*destU, Mat*destS, Mat*destV);
+
+/**
+*performs matrix multiplication Result = AB
+*/
+void mulit(Mat& a, Mat&b, Mat* result);
+
+/**
+*computes matrix transpose of a
+*/ 
+void transpose(Mat& a, Mat* result);
+
+/**
+*computes the sum of the elementwise multiplication of a with b centered at x,y of a
+*/
+double dot(Mat& a, Mat& b, int x, int y);
+
+/**
+*create an rxc identity matrix and stores it in result
+*/
+void identity(int r, int c, Mat* result);
 
 //TODO::add any conversion frunctions from Mat to other useful formats
 

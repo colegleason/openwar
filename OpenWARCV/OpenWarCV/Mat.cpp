@@ -6,21 +6,21 @@
 *create empty matrix
 */
 Mat::Mat() {
-	init(3,3);
+	resize(3,3);
 }
 
 /**
 *create an rxc matrix
 */
 Mat::Mat(int r, int c) {
-	init(r,c);
+	resize(r,c);
 }
 
 /**
 *create matrix from 2d byte array
 */
 Mat::Mat(char* b, int r, int c) {
-	init(r,c);
+	resize(r,c);
 	int index = 0;
 	for(int i=0; i<r; i++){
 		for(int j=0; j<c; j++){
@@ -51,10 +51,10 @@ int Mat::cols() {
 	return this->rowData[0].size();
 }
 
-void Mat::init(int r, int c) {
-	this->rowData.reserve(r);
+void Mat::resize(int r, int c) {
+	this->rowData.resize(r);
 	Mat m;
 	for(int i=0; i<r; i++){
-		rowData[i].reserve(c);
+		rowData[i].resize(c);
 	}
 }

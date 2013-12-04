@@ -39,9 +39,8 @@ public:
 	*/
 	int cols();
 
-private:
 	/**
 	*resizes matrix to rxc
 	*/
-	void init(int r, int c);
+	void resize(int r, int c);
 };
