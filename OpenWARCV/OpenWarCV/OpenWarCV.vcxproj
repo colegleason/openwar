@@ -104,15 +104,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="core.h" />
+    <ClInclude Include="Feature2d.h" />
+    <ClInclude Include="ImgOps.h" />
     <ClInclude Include="Mat.h" />
-    <ClInclude Include="mat_ops.h" />
+    <ClInclude Include="MatOps.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="core.cpp" />
+    <ClCompile Include="Feature2d.cpp" />
+    <ClCompile Include="ImgOps.cpp" />
     <ClCompile Include="Mat.cpp" />
+    <ClCompile Include="MatOps.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>

@@ -9,13 +9,16 @@
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="Mat.cpp" />
-    <ClCompile Include="core.cpp" />
+    <ClCompile Include="ImgOps.cpp" />
+    <ClCompile Include="MatOps.cpp" />
+    <ClCompile Include="Feature2d.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Mat.h" />
-    <ClInclude Include="core.h" />
-    <ClInclude Include="mat_ops.h" />
+    <ClInclude Include="ImgOps.h" />
+    <ClInclude Include="MatOps.h" />
+    <ClInclude Include="Feature2d.h" />
   </ItemGroup>
 </Project>

@@ -1,5 +1,6 @@
 ﻿#pragma once
 #include "pch.h"
+#include "Mat.h"
 
 /**
 *create empty matrix
