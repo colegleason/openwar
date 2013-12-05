@@ -11,7 +11,6 @@ void imfilter(Mat& img, Mat& filter, Mat* result){
     if (img == NULL || filter == NULL)
         return;
 
-    result = new Mat(img.rows(),img.cols());
     int r,c;
     for (r = 0 ; r < img.rows() ; r++)
          for (c = 0 ; c < img.cols() ; c++)
@@ -35,4 +34,12 @@ void imresize(Mat& img, float ratio, Mat* result){
         for (c = 0 ; c < *result.cols() ; c++)
             *result[r][c] = img[round(r/ratio)][round(c/ratio)];
 
+    Mat fil = GaussianDist(5, 0.08);
+
+    /* If increasing size of image, we need to use a Laplacian Filter, otherwise we do Gaussian */
+    if (ratio > 1.0)
+        fil = 1 - fil;
+    
+    imfilter(result, fil, &result); 
+	
 }
