@@ -1,0 +1,49 @@
+﻿Build started 12/5/2013 1:09:40 PM.
+     1>Project "C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\OpenWarSDK\OpenWarSDK.vcxproj" on node 2 (Build target(s)).
+     1>FxCompile:
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\fxc.exe /nologo /E"main" /T ps_4_0_level_9_3 /Fo "C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\Debug\OpenWarSDK\SimplePixelShader.cso" /Zi SimplePixelShader.hlsl 
+         compilation object save succeeded; see C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\Debug\OpenWarSDK\SimplePixelShader.cso
+         C:\Program Files (x86)\Windows Kits\8.0\bin\x86\fxc.exe /nologo /E"main" /T vs_4_0_level_9_3 /Fo "C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\Debug\OpenWarSDK\SimpleVertexShader.cso" /Zi SimpleVertexShader.hlsl 
+         compilation object save succeeded; see C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\Debug\OpenWarSDK\SimpleVertexShader.cso
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\CL.exe /c /IC:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\OpenWarSDK\ /IDebug\ /IC:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\OpenWarSDK\ /I"Generated Files\\" /IDebug\ /ZI /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D PSAPI_VERSION=2 /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"pch.h" /Fp"Debug\OpenWarSDK.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt pch.cpp
+         pch.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\CL.exe /c /IC:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\OpenWarSDK\ /IDebug\ /IC:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\OpenWarSDK\ /I"Generated Files\\" /IDebug\ /ZI /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D PSAPI_VERSION=2 /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"pch.h" /Fp"Debug\OpenWarSDK.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt Feature2d.cpp ImgOps.cpp Marker.cpp Mat.cpp MatOps.cpp Model.cpp OpenWarSDK.cpp
+         Feature2d.cpp
+         ImgOps.cpp
+         Marker.cpp
+         Mat.cpp
+         MatOps.cpp
+         Model.cpp
+         OpenWarSDK.cpp
+     1>c:\users\tsher_000\documents\github\openwar\openwarsdk\openwarsdk\feature2d.h(9): warning C4091: 'typedef ' : ignored on left of 'Feature2d::Point' when no variable is declared (Feature2d.cpp)
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\Debug\OpenWarSDK\OpenWarSDK.exe" /INCREMENTAL /NOLOGO d3d11.lib WindowsPhoneCore.lib RuntimeObject.lib PhoneAppModelHost.lib /NODEFAULTLIB:ole32.lib /MANIFEST:NO /DEBUG /PDB:"C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\Debug\OpenWarSDK\OpenWarSDK.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /WINMD:NO /WINMDFILE:"C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\Debug\OpenWarSDK\OpenWarSDK.winmd" /DYNAMICBASE /NXCOMPAT /MACHINE:X86 Debug\Feature2d.obj
+         Debug\ImgOps.obj
+         Debug\Marker.obj
+         Debug\Mat.obj
+         Debug\MatOps.obj
+         Debug\Model.obj
+         Debug\OpenWarSDK.obj
+         Debug\pch.obj
+         OpenWarSDK.vcxproj -> C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\Debug\OpenWarSDK\OpenWarSDK.exe
+       XapPackager:
+         Begin Xap packaging
+         Creating file OpenWarSDK_Debug_Win32.xap
+         Adding WMAppManifest.xml
+         Adding OpenWarSDK.exe
+         Adding SimplePixelShader.cso
+         Adding SimpleVertexShader.cso
+         Adding Assets\ApplicationIcon.png
+         Adding Assets\AlignmentGrid.png
+         Adding Assets\Tiles\FlipCycleTileLarge.png
+         Adding Assets\Tiles\FlipCycleTileMedium.png
+         Adding Assets\Tiles\FlipCycleTileSmall.png
+         Adding Assets\Tiles\IconicTileMediumLarge.png
+         Adding Assets\Tiles\IconicTileSmall.png
+         Xap packaging completed successfully
+     1>Done Building Project "C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\OpenWarSDK\OpenWarSDK.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:07.25

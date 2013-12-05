@@ -1,0 +1,13 @@
+﻿<xapCache source="C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\Debug\OpenWarSDK\OpenWarSDK_Debug_Win32.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="12/5/2013 1:09:47 PM">
+  <file source="C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\Debug\OpenWarSDK\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="12/5/2013 12:53:21 PM" />
+  <file source="C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\Debug\OpenWarSDK\OpenWarSDK.exe" archivePath="OpenWarSDK.exe" lastWriteTime="12/5/2013 1:09:46 PM" />
+  <file source="C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\Debug\OpenWarSDK\SimplePixelShader.cso" archivePath="SimplePixelShader.cso" lastWriteTime="12/5/2013 1:09:40 PM" />
+  <file source="C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\Debug\OpenWarSDK\SimpleVertexShader.cso" archivePath="SimpleVertexShader.cso" lastWriteTime="12/5/2013 1:09:40 PM" />
+  <file source="C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\OpenWarSDK\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="10/10/2012 11:03:34 AM" />
+  <file source="C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\OpenWarSDK\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="10/10/2012 11:03:34 AM" />
+  <file source="C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\OpenWarSDK\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="10/10/2012 11:03:34 AM" />
+  <file source="C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\OpenWarSDK\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="10/10/2012 11:03:34 AM" />
+  <file source="C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\OpenWarSDK\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="10/10/2012 11:03:34 AM" />
+  <file source="C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\OpenWarSDK\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="10/10/2012 11:03:34 AM" />
+  <file source="C:\Users\tsher_000\Documents\GitHub\openwar\OpenWarSDK\OpenWarSDK\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="10/10/2012 11:03:34 AM" />
+</xapCache>
