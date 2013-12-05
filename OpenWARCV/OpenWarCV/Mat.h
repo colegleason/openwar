@@ -30,6 +30,8 @@ public:
 	*/
 	Row& Mat::operator[](int r); 
 
+	Mat Mat::operator=(const Mat &rhs);
+
 	/**
 	*get number of rows
 	*/

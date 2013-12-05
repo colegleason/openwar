@@ -37,6 +37,15 @@ Mat::Row& Mat::operator[](int r) {
 	return this->rowData[r];
 }
 
+Mat::Mat Mat::operator=(const Mat &rhs)
+{
+	Row = rhs.Row;
+	//should we iterate thru vector?
+	rowData = rhs.rowData;
+	
+	return *this;
+}
+
 /**
 *get number of rows
 */

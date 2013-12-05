@@ -2,6 +2,9 @@
 #include "pch.h"
 #include "MatOps.h"
 #include <cfloat>
+#include <cmath>
+
+#define PI	3.14159265359
 
 /**
 *sum of squard difference (distance metric)
@@ -11,7 +14,7 @@
 double MatOps::ssd(Mat& a, Mat& b, int x, int y) {
     if ( x < 0 || y < 0 || x + b.cols() > a.cols()|| y + b.rows() > a.rows())
         return DBL_MAX;
-    
+
     /* Declaring iterators for SDD */
     int rb, cb;
     double distance = 0.0; 
@@ -99,6 +102,32 @@ void identity(int r, int c, Mat* result) {
 			(*result)[i][j] = (i == j) ? 1 : 0;
 		}
 	}
+}
+
+Mat* GaussianDist(int size, double sigma)
+{
+	//parameter check
+	if(size == 0 || sigma == 0)
+		return NULL;
+
+	//we dont want an even matrix
+	if(size % 2 == 0)
+		size++;
+
+	Mat* gauss = new Mat(size, size);
+	int u = size >> 1; //mean
+
+	//P(x) = (1/(sigma * sqrt(2pi))) * exp(-(x-u)^2/(2*sigma))
+	for(int x = 0 ; x < size ; ++x)
+	{
+		for(int y = 0 ; y < size ; ++y)
+		{
+			(*gauss)[x][y] = (1/(sigma * sqrt(2 * PI))) * exp(-((x-u)*(x-u))/(2*sigma));
+			(*gauss)[x][y] *= (1/(sigma * sqrt(2 * PI))) * exp(-((y-u)*(y-u))/(2*sigma));
+		}
+	}
+	
+	return gauss;
 }
 
 //TODO::add any conversion frunctions from Mat to other useful formats

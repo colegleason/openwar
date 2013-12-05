@@ -36,6 +36,11 @@ double dot(Mat& a, Mat& b, int x, int y);
 */
 void identity(int r, int c, Mat* result);
 
+/**
+*function that computes a Gaussian distribution on a square matrix
+*/
+Mat* GaussianDist(int size, double sigma);
+
 //TODO::add any conversion frunctions from Mat to other useful formats
 
 };
