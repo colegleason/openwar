@@ -34,7 +34,7 @@ void imresize(Mat& img, float ratio, Mat* result){
         for (c = 0 ; c < *result.cols() ; c++)
             *result[r][c] = img[round(r/ratio)][round(c/ratio)];
 
-    Mat fil = GaussianDist(5, 0.08);
+    Mat fil = GaussianDist(5, 0.08); // Magic numbers
 
     /* If increasing size of image, we need to use a Laplacian Filter, otherwise we do Gaussian */
     if (ratio > 1.0)
