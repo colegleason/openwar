@@ -19,7 +19,7 @@ void svd(Mat& a, Mat*destU, Mat*destS, Mat*destV);
 /**
 *performs matrix multiplication Result = AB
 */
-void mulit(Mat& a, Mat&b, Mat* result);
+void multi(Mat& a, Mat&b, Mat* result);
 
 /**
 *computes matrix transpose of a
@@ -39,7 +39,7 @@ void identity(int r, int c, Mat* result);
 /**
 *function that computes a Gaussian distribution on a square matrix
 */
-Mat* GaussianDist(int size, double sigma);
+void GaussianDist(int size, double sigma, Mat* result);
 
 //TODO::add any conversion frunctions from Mat to other useful formats
 

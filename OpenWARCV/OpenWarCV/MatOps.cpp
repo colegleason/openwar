@@ -39,7 +39,7 @@ void MatOps::svd(Mat& a, Mat*destU, Mat*destS, Mat*destV) {
 /**
 *performs matrix multiplication Result = AB
 */
-void MatOps::mulit(Mat& a, Mat&b, Mat* result) {
+void MatOps::multi(Mat& a, Mat&b, Mat* result) {
 	if(a.cols()  != b.rows()) {
 		//error
 		return;
@@ -104,17 +104,17 @@ void identity(int r, int c, Mat* result) {
 	}
 }
 
-Mat* GaussianDist(int size, double sigma)
+void GaussianDist(int size, double sigma, Mat * gauss)
 {
 	//parameter check
 	if(size == 0 || sigma == 0)
-		return NULL;
+		return;
 
 	//we dont want an even matrix
 	if(size % 2 == 0)
 		size++;
 
-	Mat* gauss = new Mat(size, size);
+	gauss->resize(size, size);
 	int u = size >> 1; //mean
 
 	//P(x) = (1/(sigma * sqrt(2pi))) * exp(-(x-u)^2/(2*sigma))
@@ -127,7 +127,6 @@ Mat* GaussianDist(int size, double sigma)
 		}
 	}
 	
-	return gauss;
 }
 
 //TODO::add any conversion frunctions from Mat to other useful formats
