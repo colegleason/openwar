@@ -305,6 +305,7 @@ namespace OpenWARExample
                     phCam.GetPreviewBufferY(YPx);
 
                     // DO STUFF HERE
+                    m_d3dInterop.update(YPx, (int)cam.PreviewResolution.Width, (int)cam.PreviewResolution.Height);
 
                     pauseFramesEvent.Reset();
                 }

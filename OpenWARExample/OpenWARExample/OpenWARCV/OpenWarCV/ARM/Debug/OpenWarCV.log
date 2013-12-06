@@ -1,5 +1,6 @@
-﻿Build started 12/5/2013 9:20:35 PM.
+﻿Build started 12/6/2013 12:06:23 AM.
      1>Project "C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\OpenWarCV.vcxproj" on node 2 (Rebuild target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppClean.targets(76,5): warning : The process cannot access the file 'c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarcv\openwarcv\arm\debug\imgops.obj' because it is being used by another process.
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /nologo /W1 /WX- /Od /Oy- /D _LIB /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"pch.h" /Fp"ARM\Debug\OpenWarCV.pch" /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt pch.cpp
          pch.cpp
@@ -8,7 +9,6 @@
          Mat.cpp
          ImgOps.cpp
          Feature2d.cpp
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarcv\openwarcv\Feature2d.h(9): warning C4091: 'typedef ' : ignored on left of 'Feature2d::Point' when no variable is declared
          Generating Code...
        Lib:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\Lib.exe /OUT:"C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\ARM\Debug\OpenWarCV\OpenWarCV.lib" /NOLOGO /MACHINE:ARM ARM\Debug\Feature2d.obj
@@ -21,4 +21,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.09
+Time Elapsed 00:00:03.13

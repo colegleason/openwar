@@ -1,4 +1,4 @@
-﻿Build started 12/5/2013 9:20:38 PM.
+﻿Build started 12/6/2013 12:06:26 AM.
      1>Project "C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\OpenWARExampleComp.vcxproj" on node 2 (Rebuild target(s)).
      1>FxCompile:
          C:\Program Files (x86)\Windows Kits\8.0\bin\x86\fxc.exe /nologo /E"main" /T ps_4_0_level_9_3 /Fo "C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\ARM\Debug\OpenWARExampleComp\SimplePixelShader.cso" SimplePixelShader.hlsl 
@@ -6,19 +6,332 @@
          C:\Program Files (x86)\Windows Kits\8.0\bin\x86\fxc.exe /nologo /E"main" /T vs_4_0_level_9_3 /Fo "C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\ARM\Debug\OpenWARExampleComp\SimpleVertexShader.cso" SimpleVertexShader.hlsl 
          compilation object save succeeded; see C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\ARM\Debug\OpenWARExampleComp\SimpleVertexShader.cso
        ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\ /I"Generated Files\\" /IARM\Debug\ /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\/../OpenWARCV/ /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\ /I"Generated Files\\" /IARM\Debug\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"pch.h" /Fp"ARM\Debug\OpenWARExampleComp.pch" /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\arm\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt pch.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\ /I"Generated Files\\" /IARM\Debug\ /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\ /I"Generated Files\\" /IARM\Debug\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"pch.h" /Fp"ARM\Debug\OpenWARExampleComp.pch" /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\arm\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt pch.cpp
          pch.cpp
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\ /I"Generated Files\\" /IARM\Debug\ /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\/../OpenWARCV/ /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\ /I"Generated Files\\" /IARM\Debug\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"pch.h" /Fp"ARM\Debug\OpenWARExampleComp.pch" /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\arm\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt Direct3DInterop.cpp CubeRenderer.cpp Direct3DBase.cpp Direct3DContentProvider.cpp Marker.cpp Model.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\ /I"Generated Files\\" /IARM\Debug\ /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\ /I"Generated Files\\" /IARM\Debug\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"pch.h" /Fp"ARM\Debug\OpenWARExampleComp.pch" /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\arm\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt Direct3DInterop.cpp CubeRenderer.cpp Direct3DBase.cpp Direct3DContentProvider.cpp Marker.cpp Model.cpp
          Direct3DInterop.cpp
          CubeRenderer.cpp
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(8): fatal error C1083: Cannot open include file: 'Mat.h': No such file or directory (Direct3DInterop.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(60): error C3986: 'Update': signature of public member contains native type 'Mat' (Direct3DInterop.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(49): error C2864: 'Marker::previous' : only static const integral data members can be initialized within a class (Direct3DInterop.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(24): error C3986: 'Update': signature of public member contains native type 'Mat' (Direct3DInterop.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3987: 'update': signature of public member contains native type 'byte []' (Direct3DInterop.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3992: 'searchScene': signature of public member contains invalid type 'Marker' (Direct3DInterop.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3986: 'searchScene': signature of public member contains native type 'Mat' (Direct3DInterop.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3986: 'searchScene': signature of public member contains native type 'std::vector<_Ty>'
+                 with
+                 [
+                     _Ty=Feature2d::Point
+                 ] (Direct3DInterop.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3986: 'searchScene': signature of public member contains native type 'Feature2d::Point' (Direct3DInterop.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3986: 'searchScene': signature of public member contains native type 'std::allocator<_Ty>'
+                 with
+                 [
+                     _Ty=Feature2d::Point
+                 ] (Direct3DInterop.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3986: 'searchScene': signature of public member contains native type 'std::vector<_Ty>'
+                 with
+                 [
+                     _Ty=Mat
+                 ] (Direct3DInterop.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3986: 'searchScene': signature of public member contains native type 'std::allocator<_Ty>'
+                 with
+                 [
+                     _Ty=Mat
+                 ] (Direct3DInterop.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(44): error C3987: 'update': signature of public member contains native type 'byte []' (Direct3DInterop.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3992: 'searchScene': signature of public member contains invalid type 'Marker' (Direct3DInterop.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3986: 'searchScene': signature of public member contains native type 'Mat' (Direct3DInterop.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3985: 'searchScene': signature of public member contains private type 'Marker' (Direct3DInterop.cpp)
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3986: 'searchScene': signature of public member contains native type 'std::vector<_Ty>'
+                 with
+                 [
+                     _Ty=Feature2d::Point
+                 ] (Direct3DInterop.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3986: 'searchScene': signature of public member contains native type 'Feature2d::Point' (Direct3DInterop.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3986: 'searchScene': signature of public member contains native type 'std::allocator<_Ty>'
+                 with
+                 [
+                     _Ty=Feature2d::Point
+                 ] (Direct3DInterop.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3986: 'searchScene': signature of public member contains native type 'std::vector<_Ty>'
+                 with
+                 [
+                     _Ty=Mat
+                 ] (Direct3DInterop.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3986: 'searchScene': signature of public member contains native type 'std::allocator<_Ty>'
+                 with
+                 [
+                     _Ty=Mat
+                 ] (Direct3DInterop.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>Direct3DInterop.cpp(118): error C2660: 'Marker::Update' : function does not take 2 arguments
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(527): error C3699: '*' : cannot use this indirection on type 'Marker' (Direct3DInterop.cpp)
+                 compiler replacing '*' with '^' to continue parsing
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\type_traits(743) : see reference to class template instantiation 'std::allocator<_Ty>' being compiled
+                 with
+                 [
+                     _Ty=Marker
+                 ]
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(655) : see reference to class template instantiation 'std::is_empty<_Ty>' being compiled
+                 with
+                 [
+                     _Ty=std::allocator<Marker>
+                 ]
+                 Direct3DInterop.cpp(132) : see reference to class template instantiation 'std::vector<_Ty>' being compiled
+                 with
+                 [
+                     _Ty=Marker
+                 ]
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(528): error C3699: '*' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(532): error C3699: '&' : cannot use this indirection on type 'Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(533): error C3699: '&' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(599): error C3699: '*' : cannot use this indirection on type 'Marker' (Direct3DInterop.cpp)
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(604): error C3699: '*' : cannot use this indirection on type 'Marker' (Direct3DInterop.cpp)
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(604): error C3699: '&' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(700): error C3699: '*' : cannot use this indirection on type 'Marker' (Direct3DInterop.cpp)
+                 compiler replacing '*' with '^' to continue parsing
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(783) : see reference to class template instantiation 'std::allocator_traits<_Alloc>' being compiled
+                 with
+                 [
+                     _Alloc=std::allocator<Marker>
+                 ]
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(444) : see reference to class template instantiation 'std::_Wrap_alloc<_Alloc>' being compiled
+                 with
+                 [
+                     _Alloc=std::allocator<Marker>
+                 ]
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(584) : see reference to class template instantiation 'std::_Vec_base_types<_Ty,_Alloc0>' being compiled
+                 with
+                 [
+                     _Ty=Marker,
+                     _Alloc0=std::allocator<Marker>
+                 ]
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(657) : see reference to class template instantiation 'std::_Vector_alloc<_Al_has_storage,_Alloc_types>' being compiled
+                 with
+                 [
+                     _Al_has_storage=false,
+                     _Alloc_types=std::_Vec_base_types<Marker,std::allocator<Marker>>
+                 ]
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(701): error C3699: '*' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(791): error C3699: '&' : cannot use this indirection on type 'Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(793): error C3699: '&' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(890): error C3699: '*' : cannot use this indirection on type 'Marker' (Direct3DInterop.cpp)
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(105): error C3699: '*' : cannot use this indirection on type 'Marker' (Direct3DInterop.cpp)
+                 compiler replacing '*' with '^' to continue parsing
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(453) : see reference to class template instantiation 'std::_Is_simple_alloc<_Alty>' being compiled
+                 with
+                 [
+                     _Alty=std::_Wrap_alloc<std::allocator<Marker>>
+                 ]
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(107): error C3699: '*' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(109): error C3699: '&' : cannot use this indirection on type 'Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(111): error C3699: '&' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(122): error C3699: '*' : cannot use this indirection on type 'Marker' (Direct3DInterop.cpp)
+                 compiler replacing '*' with '^' to continue parsing
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(473) : see reference to class template instantiation 'std::_Simple_types<_Value_type>' being compiled
+                 with
+                 [
+                     _Value_type=Marker
+                 ]
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(585) : see reference to class template instantiation 'std::_Vector_val<_Val_types>' being compiled
+                 with
+                 [
+                     _Val_types=std::_Simple_types<Marker>
+                 ]
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(123): error C3699: '*' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(124): error C3699: '&' : cannot use this indirection on type 'Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\xmemory0(125): error C3699: '&' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(699): error C3699: '&' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(705): error C3699: '&' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(773): error C3699: '*' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(835): error C3699: '&&' : cannot use this indirection on type 'Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(858): error C3699: '&&' : cannot use this indirection on type 'Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(1077): error C3699: '&' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(1183): error C3699: '&' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(1239): error C3699: '&' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(1244): error C3699: '&' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(1250): error C3699: '&' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(1451): error C3699: '&' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(1494): error C3699: '*' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(1565): error C3699: '&' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(1658): error C3699: '*' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
+                 compiler replacing '*' with '^' to continue parsing
+     1>Direct3DInterop.cpp(142): error C2248: 'Marker::previous' : cannot access private member declared in class 'Marker'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(49) : see declaration of 'Marker::previous'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
+     1>Direct3DInterop.cpp(143): error C2039: 'orignalImage' : is not a member of 'Marker'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
+     1>Direct3DInterop.cpp(148): error C2664: 'OpenWARExampleComp::Direct3DInterop::searchScene' : cannot convert parameter 2 from 'Marker ^' to 'Marker'
+                 No user-defined-conversion operator available, or
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>Direct3DInterop.cpp(157): error C2248: 'Marker::previousImage' : cannot access private member declared in class 'Marker'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(48) : see declaration of 'Marker::previousImage'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
+     1>Direct3DInterop.cpp(158): error C2664: 'OpenWARExampleComp::Direct3DInterop::searchScene' : cannot convert parameter 2 from 'Marker ^' to 'Marker'
+                 No user-defined-conversion operator available, or
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>Direct3DInterop.cpp(160): error C2248: 'Marker::previous' : cannot access private member declared in class 'Marker'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(49) : see declaration of 'Marker::previous'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
+     1>Direct3DInterop.cpp(177): error C2248: 'Marker::previous' : cannot access private member declared in class 'Marker'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(49) : see declaration of 'Marker::previous'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
+     1>Direct3DInterop.cpp(178): error C2248: 'Marker::previousImage' : cannot access private member declared in class 'Marker'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(48) : see declaration of 'Marker::previousImage'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
          Direct3DBase.cpp
          Direct3DContentProvider.cpp
          Marker.cpp
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(8): fatal error C1083: Cannot open include file: 'Mat.h': No such file or directory (Direct3DContentProvider.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(60): error C3986: 'Update': signature of public member contains native type 'Mat' (Direct3DContentProvider.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(49): error C2864: 'Marker::previous' : only static const integral data members can be initialized within a class (Direct3DContentProvider.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(24): error C3986: 'Update': signature of public member contains native type 'Mat' (Direct3DContentProvider.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3987: 'update': signature of public member contains native type 'byte []' (Direct3DContentProvider.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3992: 'searchScene': signature of public member contains invalid type 'Marker' (Direct3DContentProvider.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3986: 'searchScene': signature of public member contains native type 'Mat' (Direct3DContentProvider.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3986: 'searchScene': signature of public member contains native type 'std::vector<_Ty>'
+                 with
+                 [
+                     _Ty=Feature2d::Point
+                 ] (Direct3DContentProvider.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3986: 'searchScene': signature of public member contains native type 'Feature2d::Point' (Direct3DContentProvider.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3986: 'searchScene': signature of public member contains native type 'std::allocator<_Ty>'
+                 with
+                 [
+                     _Ty=Feature2d::Point
+                 ] (Direct3DContentProvider.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3986: 'searchScene': signature of public member contains native type 'std::vector<_Ty>'
+                 with
+                 [
+                     _Ty=Mat
+                 ] (Direct3DContentProvider.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3986: 'searchScene': signature of public member contains native type 'std::allocator<_Ty>'
+                 with
+                 [
+                     _Ty=Mat
+                 ] (Direct3DContentProvider.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(44): error C3987: 'update': signature of public member contains native type 'byte []' (Direct3DContentProvider.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3992: 'searchScene': signature of public member contains invalid type 'Marker' (Direct3DContentProvider.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3986: 'searchScene': signature of public member contains native type 'Mat' (Direct3DContentProvider.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3985: 'searchScene': signature of public member contains private type 'Marker' (Direct3DContentProvider.cpp)
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3986: 'searchScene': signature of public member contains native type 'std::vector<_Ty>'
+                 with
+                 [
+                     _Ty=Feature2d::Point
+                 ] (Direct3DContentProvider.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3986: 'searchScene': signature of public member contains native type 'Feature2d::Point' (Direct3DContentProvider.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3986: 'searchScene': signature of public member contains native type 'std::allocator<_Ty>'
+                 with
+                 [
+                     _Ty=Feature2d::Point
+                 ] (Direct3DContentProvider.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(6) : see declaration of 'Feature2d::Point'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3986: 'searchScene': signature of public member contains native type 'std::vector<_Ty>'
+                 with
+                 [
+                     _Ty=Mat
+                 ] (Direct3DContentProvider.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(45): error C3986: 'searchScene': signature of public member contains native type 'std::allocator<_Ty>'
+                 with
+                 [
+                     _Ty=Mat
+                 ] (Direct3DContentProvider.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>Direct3DContentProvider.cpp(15): fatal error C1903: unable to recover from previous error(s); stopping compilation
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(60): error C3986: 'Update': signature of public member contains native type 'Mat' (Marker.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(49): error C2864: 'Marker::previous' : only static const integral data members can be initialized within a class (Marker.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(24): error C3986: 'Update': signature of public member contains native type 'Mat' (Marker.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>Marker.cpp(21): error C2039: 'UpdateMatrix' : is not a member of 'Marker'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
+     1>Marker.cpp(22): error C2065: 'm_Matrix' : undeclared identifier
+     1>Marker.cpp(23): error C2065: 'm_ModelList' : undeclared identifier
+     1>Marker.cpp(23): error C2228: left of '.begin' must have class/struct/union
+                 type is ''unknown-type''
+     1>Marker.cpp(23): error C2228: left of '.end' must have class/struct/union
+                 type is ''unknown-type''
+     1>Marker.cpp(24): error C2039: 'UpdateMatrix' : is not a member of 'Model'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(46) : see declaration of 'Model'
+     1>Marker.cpp(24): error C2065: 'm_Matrix' : undeclared identifier
+     1>Marker.cpp(25): error C2248: 'Model::m_onScreen' : cannot access private member declared in class 'Model'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(69) : see declaration of 'Model::m_onScreen'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(46) : see declaration of 'Model'
+     1>Marker.cpp(25): error C2065: 'previous' : undeclared identifier
          Model.cpp
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(60): error C3986: 'Update': signature of public member contains native type 'Mat' (Model.cpp)
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
+     1>Model.cpp(281): error C2039: 'toXMatrix' : is not a member of 'Mat'
+                 C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
      1>Done Building Project "C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\OpenWARExampleComp.vcxproj" (Rebuild target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:13.42
+Time Elapsed 00:00:09.41
