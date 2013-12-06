@@ -41,6 +41,16 @@ void identity(int r, int c, Mat* result);
 */
 void GaussianDist(int size, double sigma, Mat* result);
 
+/**
+*power iteration method for computing eigenvectors
+*/
+void powerIteration(Mat* A, Mat* x, Mat* eigenv);
+
+/**
+*function for normalizing a vector
+*/
+void normalize(Mat* in, Mat* out);
+
 //TODO::add any conversion frunctions from Mat to other useful formats
 
 };
