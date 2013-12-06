@@ -59,7 +59,10 @@ void MatOps::svd(Mat& a, Mat*destV) {
         powerIteration(temp,x,&eigen);
 	deflate(temp,*temp2);
         temp = temp2;
-        dest[c][c] = eigen[1][1]; 	        
+        for(int m = 0 ; m < eigen.cols() ; m ++)
+	{
+	    destV[c][m] = eigen[m][1];
+	} 	        
      }     
 	
        
