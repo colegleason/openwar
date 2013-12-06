@@ -1,0 +1,20 @@
+﻿Build started 12/5/2013 9:30:13 PM.
+     1>Project "c:\Users\tsher_000\documents\visual studio 2012\Projects\OpenWARExample\OpenWARExample\OpenWARExampleComp\OpenWARExampleComp.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\CL.exe /c /I"c:\Users\tsher_000\documents\visual studio 2012\Projects\OpenWARExample\OpenWARExample\OpenWARExampleComp\\" /I"Generated Files\\" /IDebug\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /ZI /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"pch.h" /Fp"Debug\OpenWARExampleComp.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt Direct3DInterop.cpp
+         Direct3DInterop.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\tsher_000\documents\visual studio 2012\Projects\OpenWARExample\Debug\OpenWARExampleComp\OpenWARExampleComp.dll" /INCREMENTAL /NOLOGO d3d11.lib WindowsPhoneCore.lib RuntimeObject.lib PhoneAppModelHost.lib /NODEFAULTLIB:ole32.lib /MANIFEST:NO /DEBUG /PDB:"c:\users\tsher_000\documents\visual studio 2012\Projects\OpenWARExample\Debug\OpenWARExampleComp\OpenWARExampleComp.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /WINMD /WINMDFILE:"c:\users\tsher_000\documents\visual studio 2012\Projects\OpenWARExample\Debug\OpenWARExampleComp\OpenWARExampleComp.winmd" /DYNAMICBASE /NXCOMPAT /MACHINE:X86 /DLL Debug\Direct3DInterop.obj
+         Debug\CubeRenderer.obj
+         Debug\Direct3DBase.obj
+         Debug\Direct3DContentProvider.obj
+         Debug\Marker.obj
+         Debug\Model.obj
+         Debug\pch.obj
+            Creating library c:\users\tsher_000\documents\visual studio 2012\Projects\OpenWARExample\Debug\OpenWARExampleComp\OpenWARExampleComp.lib and object c:\users\tsher_000\documents\visual studio 2012\Projects\OpenWARExample\Debug\OpenWARExampleComp\OpenWARExampleComp.exp
+         OpenWARExampleComp.vcxproj -> c:\users\tsher_000\documents\visual studio 2012\Projects\OpenWARExample\Debug\OpenWARExampleComp\OpenWARExampleComp.dll
+     1>Done Building Project "c:\Users\tsher_000\documents\visual studio 2012\Projects\OpenWARExample\OpenWARExample\OpenWARExampleComp\OpenWARExampleComp.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.57
