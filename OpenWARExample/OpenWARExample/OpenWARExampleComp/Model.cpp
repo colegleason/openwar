@@ -195,6 +195,7 @@ void Model::UpdateForWindowSizeChange(float width, float height)
 
 void Model::Render()
 {
+	if (!m_onScreen) return;
 	// Only draw the cube once it is loaded (loading is asynchronous).
 	if (!m_loadingComplete)
 	{
@@ -275,12 +276,13 @@ void Model::Scale(float x, float y, float z)
 	m_ModelTransform = XMMatrixMultiply(m_ModelTransform, XMMatrixScaling(x, y, z));
 }
 
-void Model::Update(float timeTotal, float timeDelta)
+void Model::Update(Mat m)
 {
-	(void) timeDelta; // Unused parameter.
-
+	XMMATRIX homography = m.toXMatrix();
+	m_ModelTransform = XMMatrixTranspose(XMMatrixMultiply(m_ModelTransform, homography));
 	XMStoreFloat4x4(&m_constantBufferData.model, XMMatrixTranspose(m_ModelTransform));
 }
+
 
 
 //bool Model::LoadObjModel(std::wstring filename, 

@@ -18,6 +18,16 @@ void Marker::Initialize()
 	CreateDeviceResources();
 }
 
+void Marker::UpdateMatrix(Mat m) {
+	m_Matrix = m;
+	for (std::vector<Model^>::iterator model = m_ModelList.begin(); model != m_ModelList.end(); model++) {
+		(*model)->UpdateMatrix(m_Matrix);
+		(*model)->m_onScreen = previous;
+	}
+
+
+}
+
 // These are the resources that depend on the device.
 void Marker::CreateDeviceResources()
 {
@@ -194,11 +204,11 @@ void Marker::Render()
 	}
 }
 
-void Marker::Update(float timeTotal, float timeDelta)
+void Marker::Update(Mat m)
 {
 	for (vector<Model^>::iterator it = m_ModelList.begin(); it != m_ModelList.end(); ++it)
 	{
-		(*it)->Update(timeTotal, timeDelta);
+		(*it)->Update(m);
 	}
 }
 
