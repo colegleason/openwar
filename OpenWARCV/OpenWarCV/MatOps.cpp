@@ -29,6 +29,85 @@ double MatOps::ssd(Mat& a, Mat& b, int x, int y) {
 }
 
 /**
+*singlular value decomposition, results are returned in destU, destS, and destV
+*may pass in nil to disregaurd certian results
+*/
+void MatOps::svd(Mat& a, Mat*destV) {
+
+
+
+    // Find eigenvalues if there a is squared or has more rows than cols. 
+    if (a.cols() > a.rows()) 
+          return;
+
+    if(destV == null)
+    {
+        destV = new Mat(9,9);
+    }    
+
+    Mat eigen = new Mat(a.cols(),1);
+    Mat temp = a; 
+    Mat temp2;
+
+    for (c = 0 ; c < a.cols() ; c++){
+  
+        Mat x = Mat(temp.rows(),1);
+        for(r = 0 ; r < temp.rows() - 1 ; r++){
+            x(r,0) = 0;
+        }
+        x(temp.rows(),0) = 1; 
+        powerIteration(temp,x,&eigen);
+	deflate(temp,*temp2);
+        temp = temp2;
+        dest[c][c] = eigen[1][1]; 	        
+     }     
+	
+       
+
+}
+
+void powerIteration(Mat* A, Mat* x, Mat* eigenv)
+{
+	//have the initial value
+	Mat* x_o = x;
+
+	x = A * x;
+
+	//compute the difference
+	Mat* diff = x - x_o;
+
+	double maxval = normalize(diff)
+	int count = 0;
+
+	while(maxval > 1e-6 && count < 1000)
+	{
+		x_o = x;
+		x = A * x;
+		x = x / normalize(x);
+		diff = x - xo
+		maxval = normalize(diff);
+		count++;
+	}
+}
+/*
+* deflate:
+* Reduces the matrix by eliminating the first row and column
+* input: 
+* a is the original matrix to be deflated
+* output
+* dest is the deflated matrix
+*/
+void MatOps::deflate(Mat&a, Mat*dest)
+{
+
+    for(int r = 1 ; r < a.rows() ; r++){
+        for(int c = 1 ; c < a.cols() ; c++){
+            *(dest[r-1][c-1] = a[r][c];
+        }
+    }
+}
+
+/**
 *singlular vaue decomposition, results are returned in destU, destS, and destV
 *may pass in nil to disregaurd certian results
 */
@@ -129,29 +208,6 @@ void GaussianDist(int size, double sigma, Mat * result)
 	
 }
 
-void powerIteration(Mat* A, Mat* x, Mat* eigenv)
-{
-	//have the initial value
-	Mat* x_o = x;
-
-	x = A * x;
-
-	//compute the difference
-	Mat* diff = x - x_o;
-
-	double maxval = normalize(diff)
-	int count = 0;
-
-	while(maxval > 1e-6 && count < 1000)
-	{
-		x_o = x;
-		x = A * x;
-		x = x / normalize(x);
-		diff = x - xo
-		maxval = normalize(diff);
-		count++;
-	}
-}
 
 /* normalize takes a Mat* with one row only (a vector)
 */
