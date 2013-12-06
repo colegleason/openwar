@@ -2,6 +2,7 @@
 
 #include "DirectXHelper.h"
 #include "Model.h"
+#include "Mat.h"
 #include <vector>
 
 using namespace std;
@@ -18,9 +19,9 @@ public:
 	void UpdateForWindowSizeChange(float width, float height);
 
 	void Render();
-	void Update(float timeTotal, float timeDelta);
-
 	void AddModel(Model^ nmodel);
+
+	void Update(Mat m);
 
 	bool previous = false;
 	Mat originalImage;
@@ -45,5 +46,6 @@ private:
 	Windows::Foundation::Rect m_windowBounds;
 
 	vector<Model^> m_ModelList;
+	Mat m_Matrix;
 };
 

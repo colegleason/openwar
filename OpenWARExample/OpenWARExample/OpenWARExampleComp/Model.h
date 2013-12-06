@@ -2,6 +2,7 @@
 
 #include <D3D11.h>
 #include "DirectXHelper.h"
+#include "Mat.h"
 
 using namespace std;
 
@@ -56,13 +57,14 @@ public:
 	void UpdateForWindowSizeChange(float width, float height);
 
 	void Render();
-	void Update(float timeTotal, float timeDelta);
+	void Update(Mat m);
 
 	void ResetModelMatrix();
 	void Translate(float x, float y, float z);
 	void Rotate(float x, float y, float z, float theta);
 	void Scale(float x, float y, float z);
 
+	bool m_onScreen = false;
 private:
 	bool m_loadingComplete;
 

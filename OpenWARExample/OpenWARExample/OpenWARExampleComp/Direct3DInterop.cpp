@@ -175,7 +175,7 @@ bool Direct3DInterop::searchScene(Mat m, Marker mark, Feature2d::KeyPoints kp, F
 	Feature2d::findHomographyRANSAC(mkp, kp, RANSAC_THRESHOLD, &H, &numMatches);
 	if (numMatches >= NUM_MATCH_THRESHOLD) {
 		mark.previous = true;
-		Feature2d::crop(m, kp, &(mark.previousImage));
+		Feature2d::crop(m, kp2, &(mark.previousImage));
 	}
 
 }
