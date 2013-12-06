@@ -1,4 +1,4 @@
-﻿Build started 12/5/2013 11:59:34 PM.
+﻿Build started 12/6/2013 12:06:26 AM.
      1>Project "C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\OpenWARExampleComp.vcxproj" on node 2 (Rebuild target(s)).
      1>FxCompile:
          C:\Program Files (x86)\Windows Kits\8.0\bin\x86\fxc.exe /nologo /E"main" /T ps_4_0_level_9_3 /Fo "C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\ARM\Debug\OpenWARExampleComp\SimplePixelShader.cso" SimplePixelShader.hlsl 
@@ -11,17 +11,11 @@
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\ /I"Generated Files\\" /IARM\Debug\ /IC:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\ /I"Generated Files\\" /IARM\Debug\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"pch.h" /Fp"ARM\Debug\OpenWARExampleComp.pch" /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\arm\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt Direct3DInterop.cpp CubeRenderer.cpp Direct3DBase.cpp Direct3DContentProvider.cpp Marker.cpp Model.cpp
          Direct3DInterop.cpp
          CubeRenderer.cpp
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(67): error C2864: 'Model::m_onScreen' : only static const integral data members can be initialized within a class (Direct3DInterop.cpp)
      1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(60): error C3986: 'Update': signature of public member contains native type 'Mat' (Direct3DInterop.cpp)
                  C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(67): error C3984: 'Model' : a non-value type cannot have any public data members 'm_onScreen' (Direct3DInterop.cpp)
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(26): error C2864: 'Marker::previous' : only static const integral data members can be initialized within a class (Direct3DInterop.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(49): error C2864: 'Marker::previous' : only static const integral data members can be initialized within a class (Direct3DInterop.cpp)
      1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(24): error C3986: 'Update': signature of public member contains native type 'Mat' (Direct3DInterop.cpp)
                  C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(26): error C3984: 'Marker' : a non-value type cannot have any public data members 'previous' (Direct3DInterop.cpp)
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(27): error C3984: 'Marker' : a non-value type cannot have any public data members 'originalImage' (Direct3DInterop.cpp)
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(28): error C3984: 'Marker' : a non-value type cannot have any public data members 'previousImage' (Direct3DInterop.cpp)
-     1>C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(9): warning C4091: 'typedef ' : ignored on left of 'Feature2d::Point' when no variable is declared (Direct3DInterop.cpp)
      1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3987: 'update': signature of public member contains native type 'byte []' (Direct3DInterop.cpp)
      1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3992: 'searchScene': signature of public member contains invalid type 'Marker' (Direct3DInterop.cpp)
      1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3986: 'searchScene': signature of public member contains native type 'Mat' (Direct3DInterop.cpp)
@@ -211,35 +205,37 @@
                  compiler replacing '&' with '^' to continue parsing
      1>C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\include\vector(1658): error C3699: '*' : cannot use this indirection on type 'const Marker' (Direct3DInterop.cpp)
                  compiler replacing '*' with '^' to continue parsing
+     1>Direct3DInterop.cpp(142): error C2248: 'Marker::previous' : cannot access private member declared in class 'Marker'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(49) : see declaration of 'Marker::previous'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
      1>Direct3DInterop.cpp(143): error C2039: 'orignalImage' : is not a member of 'Marker'
                  c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
      1>Direct3DInterop.cpp(148): error C2664: 'OpenWARExampleComp::Direct3DInterop::searchScene' : cannot convert parameter 2 from 'Marker ^' to 'Marker'
                  No user-defined-conversion operator available, or
                  No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>Direct3DInterop.cpp(157): error C2248: 'Marker::previousImage' : cannot access private member declared in class 'Marker'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(48) : see declaration of 'Marker::previousImage'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
      1>Direct3DInterop.cpp(158): error C2664: 'OpenWARExampleComp::Direct3DInterop::searchScene' : cannot convert parameter 2 from 'Marker ^' to 'Marker'
                  No user-defined-conversion operator available, or
                  No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
-     1>Direct3DInterop.cpp(170): error C2660: 'Feature2d::match' : function does not take 5 arguments
-     1>Direct3DInterop.cpp(171): error C2039: 'filter' : is not a member of 'Feature2d'
-     1>Direct3DInterop.cpp(171): error C3861: 'filter': identifier not found
-     1>Direct3DInterop.cpp(172): error C2039: 'filter' : is not a member of 'Feature2d'
-     1>Direct3DInterop.cpp(172): error C3861: 'filter': identifier not found
-     1>Direct3DInterop.cpp(178): error C2039: 'crop' : is not a member of 'Feature2d'
-     1>Direct3DInterop.cpp(178): error C3861: 'crop': identifier not found
+     1>Direct3DInterop.cpp(160): error C2248: 'Marker::previous' : cannot access private member declared in class 'Marker'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(49) : see declaration of 'Marker::previous'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
+     1>Direct3DInterop.cpp(177): error C2248: 'Marker::previous' : cannot access private member declared in class 'Marker'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(49) : see declaration of 'Marker::previous'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
+     1>Direct3DInterop.cpp(178): error C2248: 'Marker::previousImage' : cannot access private member declared in class 'Marker'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(48) : see declaration of 'Marker::previousImage'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
          Direct3DBase.cpp
          Direct3DContentProvider.cpp
          Marker.cpp
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(67): error C2864: 'Model::m_onScreen' : only static const integral data members can be initialized within a class (Direct3DContentProvider.cpp)
      1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(60): error C3986: 'Update': signature of public member contains native type 'Mat' (Direct3DContentProvider.cpp)
                  C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(67): error C3984: 'Model' : a non-value type cannot have any public data members 'm_onScreen' (Direct3DContentProvider.cpp)
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(26): error C2864: 'Marker::previous' : only static const integral data members can be initialized within a class (Direct3DContentProvider.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(49): error C2864: 'Marker::previous' : only static const integral data members can be initialized within a class (Direct3DContentProvider.cpp)
      1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(24): error C3986: 'Update': signature of public member contains native type 'Mat' (Direct3DContentProvider.cpp)
                  C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(26): error C3984: 'Marker' : a non-value type cannot have any public data members 'previous' (Direct3DContentProvider.cpp)
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(27): error C3984: 'Marker' : a non-value type cannot have any public data members 'originalImage' (Direct3DContentProvider.cpp)
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(28): error C3984: 'Marker' : a non-value type cannot have any public data members 'previousImage' (Direct3DContentProvider.cpp)
-     1>C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Feature2d.h(9): warning C4091: 'typedef ' : ignored on left of 'Feature2d::Point' when no variable is declared (Direct3DContentProvider.cpp)
      1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3987: 'update': signature of public member contains native type 'byte []' (Direct3DContentProvider.cpp)
      1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3992: 'searchScene': signature of public member contains invalid type 'Marker' (Direct3DContentProvider.cpp)
      1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Direct3DInterop.h(66): error C3986: 'searchScene': signature of public member contains native type 'Mat' (Direct3DContentProvider.cpp)
@@ -309,17 +305,11 @@
                  C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
                  C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
      1>Direct3DContentProvider.cpp(15): fatal error C1903: unable to recover from previous error(s); stopping compilation
-         Model.cpp
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(67): error C2864: 'Model::m_onScreen' : only static const integral data members can be initialized within a class (Marker.cpp)
      1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(60): error C3986: 'Update': signature of public member contains native type 'Mat' (Marker.cpp)
                  C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(67): error C3984: 'Model' : a non-value type cannot have any public data members 'm_onScreen' (Marker.cpp)
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(26): error C2864: 'Marker::previous' : only static const integral data members can be initialized within a class (Marker.cpp)
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(49): error C2864: 'Marker::previous' : only static const integral data members can be initialized within a class (Marker.cpp)
      1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(24): error C3986: 'Update': signature of public member contains native type 'Mat' (Marker.cpp)
                  C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(26): error C3984: 'Marker' : a non-value type cannot have any public data members 'previous' (Marker.cpp)
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(27): error C3984: 'Marker' : a non-value type cannot have any public data members 'originalImage' (Marker.cpp)
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(28): error C3984: 'Marker' : a non-value type cannot have any public data members 'previousImage' (Marker.cpp)
      1>Marker.cpp(21): error C2039: 'UpdateMatrix' : is not a member of 'Marker'
                  c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Marker.h(11) : see declaration of 'Marker'
      1>Marker.cpp(22): error C2065: 'm_Matrix' : undeclared identifier
@@ -331,15 +321,17 @@
      1>Marker.cpp(24): error C2039: 'UpdateMatrix' : is not a member of 'Model'
                  c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(46) : see declaration of 'Model'
      1>Marker.cpp(24): error C2065: 'm_Matrix' : undeclared identifier
+     1>Marker.cpp(25): error C2248: 'Model::m_onScreen' : cannot access private member declared in class 'Model'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(69) : see declaration of 'Model::m_onScreen'
+                 c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(46) : see declaration of 'Model'
      1>Marker.cpp(25): error C2065: 'previous' : undeclared identifier
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(67): error C2864: 'Model::m_onScreen' : only static const integral data members can be initialized within a class (Model.cpp)
+         Model.cpp
      1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(60): error C3986: 'Update': signature of public member contains native type 'Mat' (Model.cpp)
                  C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
-     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarexamplecomp\Model.h(67): error C3984: 'Model' : a non-value type cannot have any public data members 'm_onScreen' (Model.cpp)
      1>Model.cpp(281): error C2039: 'toXMatrix' : is not a member of 'Mat'
                  C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\Mat.h(5) : see declaration of 'Mat'
      1>Done Building Project "C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\OpenWARExampleComp.vcxproj" (Rebuild target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:09.63
+Time Elapsed 00:00:09.41

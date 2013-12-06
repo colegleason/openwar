@@ -64,9 +64,9 @@ public:
 	void Rotate(float x, float y, float z, float theta);
 	void Scale(float x, float y, float z);
 
-	bool m_onScreen = false;
 private:
 	bool m_loadingComplete;
+	bool m_onScreen;
 
 	// Direct3D Objects.
 	Microsoft::WRL::ComPtr<ID3D11Device1> m_d3dDevice;

@@ -23,9 +23,6 @@ public:
 
 	void Update(Mat m);
 
-	bool previous = false;
-	Mat originalImage;
-	Mat previousImage;
 
 internal:
 	ID3D11Texture2D* GetTexture()
@@ -47,5 +44,8 @@ private:
 
 	vector<Model^> m_ModelList;
 	Mat m_Matrix;
+	Mat originalImage;
+	Mat previousImage;
+	bool previous = false;
 };
 

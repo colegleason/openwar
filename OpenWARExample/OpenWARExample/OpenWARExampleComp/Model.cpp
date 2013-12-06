@@ -278,7 +278,7 @@ void Model::Scale(float x, float y, float z)
 
 void Model::Update(Mat m)
 {
-	XMMATRIX homography = m.toXMatrix();
+	XMMATRIX homography = matToXMatrix(m);
 	m_ModelTransform = XMMatrixTranspose(XMMatrixMultiply(m_ModelTransform, homography));
 	XMStoreFloat4x4(&m_constantBufferData.model, XMMatrixTranspose(m_ModelTransform));
 }

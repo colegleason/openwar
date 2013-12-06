@@ -29,12 +29,87 @@ double MatOps::ssd(Mat& a, Mat& b, int x, int y) {
 }
 
 /**
-*singlular vaue decomposition, results are returned in destU, destS, and destV
+*singlular value decomposition, results are returned in destU, destS, and destV
 *may pass in nil to disregaurd certian results
 */
-void MatOps::svd(Mat& a, Mat*destU, Mat*destS, Mat*destV) {
+void MatOps::svd(Mat& a, Mat* destU, Mat* destS, Mat*destV) {
+
+
+
+    // Find eigenvalues if there a is squared or has more rows than cols. 
+    if (a.cols() > a.rows()) 
+          return;
+	Mat v(9,9);
+    if(destV == NULL) {
+        destV = &v;
+    }    
+
+    Mat eigen = Mat(a.cols(),1);
+    Mat temp = a; 
+    Mat temp2;
+
+	for (int c = 0 ; c < a.cols() ; c++) {
+  
+		Mat x = Mat(temp.rows(),1);
+		for(int r = 0 ; r < temp.rows() - 1 ; r++) {
+			x[r][0] = 0;
+		}
+		x[temp.rows()][0] = 1; 
+		powerIteration(temp, x, &eigen);
+		deflate(temp, &temp2);
+		temp = temp2;
+		for(int m = 0 ; m < eigen.cols() ; m ++) {
+			(*destV)[c][m] = eigen[m][1];
+		} 	        
+	}     
+	
+       
 
 }
+
+void MatOps::powerIteration(Mat& A, Mat& x, Mat* eigenv)
+{
+	//have the initial value
+	Mat x_o = x;
+
+	Mat x_1;
+	MatOps::multi(A, x, &x_1);
+	x = x_1;
+
+	//compute the difference
+	Mat diff = x - x_o;
+
+	double maxval = normalize(diff);
+	int count = 0;
+
+	while(maxval > 1e-6 && count < 1000)
+	{
+		x_o = x;
+		x = A * x;
+		x = x *(1/normalize(x));
+		diff = x - x_o;
+		maxval = normalize(diff);
+		count++;
+	}
+}
+
+/**
+* deflate:
+* Reduces the matrix by eliminating the first row and column
+* input: 
+* a is the original matrix to be deflated
+* output
+* dest is the deflated matrix
+*/
+void MatOps::deflate(Mat&a, Mat*dest)
+{
+    for(int r = 1 ; r < a.rows() ; r++){
+        for(int c = 1 ; c < a.cols() ; c++){
+            (*dest)[r-1][c-1] = a[r][c];
+        }
+    }
+}
+
 
 /**
 *performs matrix multiplication Result = AB
@@ -95,7 +170,7 @@ double MatOps::dot(Mat& a, Mat& b, int x, int y) {
 /**
 *create an rxc identity matrix and stores it in result
 */
-void identity(int r, int c, Mat* result) {
+void MatOps::identity(int r, int c, Mat* result) {
 	result->resize(r, c);
 	for(int i=0; i<r; i++) {
 		for(int j=0; i<c; j++) {
@@ -104,7 +179,7 @@ void identity(int r, int c, Mat* result) {
 	}
 }
 
-void GaussianDist(int size, double sigma, Mat * gauss)
+void MatOps::GaussianDist(int size, double sigma, Mat * result)
 {
 	//parameter check
 	if(size == 0 || sigma == 0)
@@ -114,7 +189,7 @@ void GaussianDist(int size, double sigma, Mat * gauss)
 	if(size % 2 == 0)
 		size++;
 
-	gauss->resize(size, size);
+	result->resize(size, size);
 	int u = size >> 1; //mean
 
 	//P(x) = (1/(sigma * sqrt(2pi))) * exp(-(x-u)^2/(2*sigma))
@@ -122,11 +197,61 @@ void GaussianDist(int size, double sigma, Mat * gauss)
 	{
 		for(int y = 0 ; y < size ; ++y)
 		{
-			(*gauss)[x][y] = (1/(sigma * sqrt(2 * PI))) * exp(-((x-u)*(x-u))/(2*sigma));
-			(*gauss)[x][y] *= (1/(sigma * sqrt(2 * PI))) * exp(-((y-u)*(y-u))/(2*sigma));
+			(*result)[x][y] = (1/(sigma * sqrt(2 * PI))) * exp(-((x-u)*(x-u))/(2*sigma));
+			(*result)[x][y] *= (1/(sigma * sqrt(2 * PI))) * exp(-((y-u)*(y-u))/(2*sigma));
 		}
 	}
 	
 }
+
+
+/* normalize takes a Mat* with one row only (a vector)
+*/
+double MatOps::normalize(Mat& in)
+{
+	//this is not a vector
+	if(in.rows() != 1)
+		return 0.0;
+	
+	double sum = 0.0;
+
+	//add the square of all the values in the vector
+	for(int i = 0 ; i < in.cols() ; ++i)
+	{
+		sum += (in[0][i] * in[0][i]);
+	}
+		
+	//take the sqrt and divide all
+	sum = 1/sqrt(sum);
+
+	return sum;
+}
+
+void MatOps::inverse(Mat& in, Mat* out)
+{
+	if(in.rows() != in.cols())
+		return;
+
+	out->resize(in.rows(), in.cols());
+
+	//make our out matrix an identity
+	identity(in.rows(), in.cols(), out);
+
+	for(int i = 0 ; i < out->rows() ; ++i)
+	{
+		double factor = in[i][i];
+		*out = *out * (1/factor);
+	
+		for(int j = 0 ; j < out->rows() ; ++j)
+		{
+			if(i == j)	continue;
+			double coef = in[j][i];
+			for(int k=0; k<out->cols(); k++) {
+				(*out)[j][k] = coef * (*out)[i][k];
+			}
+		}
+	}
+}
+
 
 //TODO::add any conversion frunctions from Mat to other useful formats

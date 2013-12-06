@@ -2,7 +2,7 @@
 #include <vector>
 
 using namespace std;
-class Mat {
+public ref class Mat sealed {
 public:
 	typedef vector<double> Row;
 
@@ -69,4 +69,5 @@ public:
 	*resizes matrix to rxc
 	*/
 	void resize(int r, int c);
+
 };
