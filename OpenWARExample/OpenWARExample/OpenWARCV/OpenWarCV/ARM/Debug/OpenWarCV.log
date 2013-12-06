@@ -1,4 +1,4 @@
-﻿Build started 12/5/2013 9:20:35 PM.
+﻿Build started 12/5/2013 11:59:31 PM.
      1>Project "C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\OpenWarCV.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /nologo /W1 /WX- /Od /Oy- /D _LIB /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"pch.h" /Fp"ARM\Debug\OpenWarCV.pch" /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt pch.cpp
@@ -21,4 +21,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.09
+Time Elapsed 00:00:03.24
