@@ -1,0 +1,19 @@
+﻿Build started 12/5/2013 7:57:15 PM.
+     1>Project "C:\Users\Cole\Downloads\openwar-master\openwar-master\OpenWARExample\OpenWARExample\OpenWARExampleComp\OpenWARExampleComp.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /I"C:\Users\Cole\Downloads\openwar-master\openwar-master\OpenWARExample\OpenWARExample\OpenWARExampleComp\\" /I"Generated Files\\" /IARM\Debug\ /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /ZW /ZW:nostdlib /nologo /W3 /WX- /sdl /MP /Od /Oy- /D _WINRT_DLL /D _WINDLL /D _UNICODE /D UNICODE /D _DEBUG /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"pch.h" /Fp"ARM\Debug\OpenWARExampleComp.pch" /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /FU"C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\lib\arm\platform.winmd" /FU"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata\Windows.winmd" /analyze- /errorReport:prompt Marker.cpp
+         Marker.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Cole\Downloads\openwar-master\openwar-master\OpenWARExample\ARM\Debug\OpenWARExampleComp\OpenWARExampleComp.dll" /INCREMENTAL /NOLOGO d3d11.lib WindowsPhoneCore.lib RuntimeObject.lib PhoneAppModelHost.lib /NODEFAULTLIB:ole32.lib /MANIFEST:NO /DEBUG /PDB:"C:\Users\Cole\Downloads\openwar-master\openwar-master\OpenWARExample\ARM\Debug\OpenWARExampleComp\OpenWARExampleComp.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /WINMD /WINMDFILE:"C:\Users\Cole\Downloads\openwar-master\openwar-master\OpenWARExample\ARM\Debug\OpenWARExampleComp\OpenWARExampleComp.winmd" /DYNAMICBASE /NXCOMPAT /MACHINE:ARM /DLL ARM\Debug\Direct3DInterop.obj
+         ARM\Debug\CubeRenderer.obj
+         ARM\Debug\Direct3DBase.obj
+         ARM\Debug\Direct3DContentProvider.obj
+         ARM\Debug\Marker.obj
+         ARM\Debug\Model.obj
+         ARM\Debug\pch.obj
+         OpenWARExampleComp.vcxproj -> C:\Users\Cole\Downloads\openwar-master\openwar-master\OpenWARExample\ARM\Debug\OpenWARExampleComp\OpenWARExampleComp.dll
+     1>Done Building Project "C:\Users\Cole\Downloads\openwar-master\openwar-master\OpenWARExample\OpenWARExample\OpenWARExampleComp\OpenWARExampleComp.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.79

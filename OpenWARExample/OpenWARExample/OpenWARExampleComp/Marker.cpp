@@ -169,7 +169,7 @@ void Marker::UpdateForWindowSizeChange(float width, float height)
 
 void Marker::Render()
 {
-	const float midnightBlue[] = { 0.098f, 0.098f, 0.439f, 1.000f };
+	const float midnightBlue[] = { 0.0f, 0.0f, 0.0f, 0.0f };
 	m_d3dContext->ClearRenderTargetView(
 		m_renderTargetView.Get(),
 		midnightBlue
