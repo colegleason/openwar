@@ -69,4 +69,5 @@ public:
 	*resizes matrix to rxc
 	*/
 	void resize(int r, int c);
+
 };

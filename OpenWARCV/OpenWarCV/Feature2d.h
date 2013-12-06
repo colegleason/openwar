@@ -29,7 +29,7 @@ void findHomography(KeyPoints& a, KeyPoints& b, Mat* H);
 *matches the descriptors of a to the descriptors of b
 *returns the indexes of a that match the index of b
 */
-void match(Descriptors& a, Descriptors& b,  vector<int> * indexesA, vector<int> * indexesB);
+void match(Descriptors& a, Descriptors& b, double tol,  vector<int> * indexesA, vector<int> * indexesB);
 
 /**
 *performs harris cornder detections, and returns the key points of the image, and descriptors
@@ -39,6 +39,8 @@ void harrisCorners(Mat& a, KeyPoints * keyspoints, Descriptors * decriptors);
 /**
 *applies H to the plane of a onto the plane of b, returns the new points in result
 */
-void projectiveTransform(KeyPoints& a, KeyPoints& b, Mat& H, KeyPoints* result);
+void projectiveTransform(KeyPoints& a, Mat& H, KeyPoints* result);
+
+void transform(Point& a, Mat& H, Mat::Row *row);
 
 };
