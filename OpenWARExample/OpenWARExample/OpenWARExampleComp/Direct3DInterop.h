@@ -5,6 +5,13 @@
 #include <DrawingSurfaceNative.h>
 #include "Marker.h"
 #include "Model.h"
+#include "Mat.h"
+#include "Feature2d.h"
+#include "ImgOps.h"
+
+#define NUM_MATCH_THRESHOLD 7
+#define MATCH_TOLERANCE 0.7
+#define RANSAC_THRESHOLD 10
 
 namespace OpenWARExampleComp
 {
@@ -33,6 +40,9 @@ public:
 		Windows::Foundation::Size get(){ return m_renderResolution; }
 		void set(Windows::Foundation::Size renderResolution);
 	}
+
+	void update(byte frame[], int w, int h);
+	bool searchScene(Mat m, Marker mark, Feature2d::KeyPoints kp, Feature2d::KeyPoints mkp, Feature2d::Descriptors desc, Feature2d::Descriptors mdesc);
 
 protected:
 	// Event Handlers

@@ -23,8 +23,8 @@ namespace OpenWARExample
         PhotoCamera cam;
         MediaLibrary library = new MediaLibrary();
         private Direct3DInterop m_d3dInterop = null;
-        private Thread ARGBFramesThread;
-        private bool pumpARGBFrames;
+        private Thread FramesThread;
+        private bool pumpFrames;
         private static ManualResetEvent pauseFramesEvent = new ManualResetEvent(true);
 
         // Holds the current flash mode.
@@ -64,11 +64,11 @@ namespace OpenWARExample
                 //Set the VideoBrush source to the camera.
                 viewfinderBrush.SetSource(cam);
 
-                pumpARGBFrames = true;
-                ARGBFramesThread = new System.Threading.Thread(PumpARGBFrames);
+                pumpFrames = true;
+                FramesThread = new System.Threading.Thread(PumpFrames);
 
                 // Start pump.
-                ARGBFramesThread.Start();
+                FramesThread.Start();
             }
             else
             {
@@ -287,22 +287,22 @@ namespace OpenWARExample
             }
         }
 
-        // ARGB frame pump
-        void PumpARGBFrames()
+        // frame pump
+        void PumpFrames()
         {
             // Create capture buffer.
-            int[] ARGBPx = new int[(int)cam.PreviewResolution.Width * (int)cam.PreviewResolution.Height];
+            byte[] YPx = new byte[(int)cam.PreviewResolution.Width * (int)cam.PreviewResolution.Height];
 
             try
             {
                 PhotoCamera phCam = (PhotoCamera)cam;
 
-                while (pumpARGBFrames)
+                while (pumpFrames)
                 {
                     pauseFramesEvent.WaitOne();
 
                     // Copies the current viewfinder frame into a buffer for further manipulation.
-                    phCam.GetPreviewBufferArgb32(ARGBPx);
+                    phCam.GetPreviewBufferY(YPx);
 
                     // DO STUFF HERE
 
