@@ -51,6 +51,11 @@ void powerIteration(Mat* A, Mat* x, Mat* eigenv);
 */
 void normalize(Mat* in, Mat* out);
 
+/*
+*calculate the inverse of a square matrix
+*/
+void inverse(Mat* in, Mat* out);
+
 //TODO::add any conversion frunctions from Mat to other useful formats
 
 };
