@@ -110,13 +110,6 @@ void MatOps::deflate(Mat&a, Mat*dest)
     }
 }
 
-/**
-*singlular vaue decomposition, results are returned in destU, destS, and destV
-*may pass in nil to disregaurd certian results
-*/
-void MatOps::svd(Mat& a, Mat*destU, Mat*destS, Mat*destV) {
-
-}
 
 /**
 *performs matrix multiplication Result = AB
