@@ -32,67 +32,68 @@ double MatOps::ssd(Mat& a, Mat& b, int x, int y) {
 *singlular value decomposition, results are returned in destU, destS, and destV
 *may pass in nil to disregaurd certian results
 */
-void MatOps::svd(Mat& a, Mat*destV) {
+void MatOps::svd(Mat& a, Mat* destU, Mat* destS, Mat*destV) {
 
 
 
     // Find eigenvalues if there a is squared or has more rows than cols. 
     if (a.cols() > a.rows()) 
           return;
-
-    if(destV == null)
-    {
-        destV = new Mat(9,9);
+	Mat v(9,9);
+    if(destV == NULL) {
+        destV = &v;
     }    
 
-    Mat eigen = new Mat(a.cols(),1);
+    Mat eigen = Mat(a.cols(),1);
     Mat temp = a; 
     Mat temp2;
 
-    for (c = 0 ; c < a.cols() ; c++){
+	for (int c = 0 ; c < a.cols() ; c++) {
   
-        Mat x = Mat(temp.rows(),1);
-        for(r = 0 ; r < temp.rows() - 1 ; r++){
-            x(r,0) = 0;
-        }
-        x(temp.rows(),0) = 1; 
-        powerIteration(temp,x,&eigen);
-	deflate(temp,*temp2);
-        temp = temp2;
-        for(int m = 0 ; m < eigen.cols() ; m ++)
-	{
-	    destV[c][m] = eigen[m][1];
-	} 	        
-     }     
+		Mat x = Mat(temp.rows(),1);
+		for(int r = 0 ; r < temp.rows() - 1 ; r++) {
+			x[r][0] = 0;
+		}
+		x[temp.rows()][0] = 1; 
+		powerIteration(temp, x, &eigen);
+		deflate(temp, &temp2);
+		temp = temp2;
+		for(int m = 0 ; m < eigen.cols() ; m ++) {
+			(*destV)[c][m] = eigen[m][1];
+		} 	        
+	}     
 	
        
 
 }
 
-void powerIteration(Mat* A, Mat* x, Mat* eigenv)
+void MatOps::powerIteration(Mat& A, Mat& x, Mat* eigenv)
 {
 	//have the initial value
-	Mat* x_o = x;
+	Mat x_o = x;
 
-	x = A * x;
+	Mat x_1;
+	MatOps::multi(A, x, &x_1);
+	x = x_1;
 
 	//compute the difference
-	Mat* diff = x - x_o;
+	Mat diff = x - x_o;
 
-	double maxval = normalize(diff)
+	double maxval = normalize(diff);
 	int count = 0;
 
 	while(maxval > 1e-6 && count < 1000)
 	{
 		x_o = x;
 		x = A * x;
-		x = x / normalize(x);
-		diff = x - xo
+		x = x *(1/normalize(x));
+		diff = x - x_o;
 		maxval = normalize(diff);
 		count++;
 	}
 }
-/*
+
+/**
 * deflate:
 * Reduces the matrix by eliminating the first row and column
 * input: 
@@ -102,10 +103,9 @@ void powerIteration(Mat* A, Mat* x, Mat* eigenv)
 */
 void MatOps::deflate(Mat&a, Mat*dest)
 {
-
     for(int r = 1 ; r < a.rows() ; r++){
         for(int c = 1 ; c < a.cols() ; c++){
-            *(dest[r-1][c-1] = a[r][c];
+            (*dest)[r-1][c-1] = a[r][c];
         }
     }
 }
@@ -170,7 +170,7 @@ double MatOps::dot(Mat& a, Mat& b, int x, int y) {
 /**
 *create an rxc identity matrix and stores it in result
 */
-void identity(int r, int c, Mat* result) {
+void MatOps::identity(int r, int c, Mat* result) {
 	result->resize(r, c);
 	for(int i=0; i<r; i++) {
 		for(int j=0; i<c; j++) {
@@ -179,7 +179,7 @@ void identity(int r, int c, Mat* result) {
 	}
 }
 
-void GaussianDist(int size, double sigma, Mat * result)
+void MatOps::GaussianDist(int size, double sigma, Mat * result)
 {
 	//parameter check
 	if(size == 0 || sigma == 0)
@@ -207,7 +207,7 @@ void GaussianDist(int size, double sigma, Mat * result)
 
 /* normalize takes a Mat* with one row only (a vector)
 */
-double normalize(Mat* in)
+double MatOps::normalize(Mat& in)
 {
 	//this is not a vector
 	if(in.rows() != 1)
@@ -227,7 +227,7 @@ double normalize(Mat* in)
 	return sum;
 }
 
-void inverse(Mat* in, Mat* out)
+void MatOps::inverse(Mat& in, Mat* out)
 {
 	if(in.rows() != in.cols())
 		return;
@@ -237,16 +237,18 @@ void inverse(Mat* in, Mat* out)
 	//make our out matrix an identity
 	identity(in.rows(), in.cols(), out);
 
-	for(int i = 0 ; i < out.rows() ; ++i)
+	for(int i = 0 ; i < out->rows() ; ++i)
 	{
 		double factor = in[i][i];
-		out /= factor;
+		*out = *out * (1/factor);
 	
-		for(int j = 0 ; j < out.rows() ; ++j)
+		for(int j = 0 ; j < out->rows() ; ++j)
 		{
 			if(i == j)	continue;
 			double coef = in[j][i];
-			out[j] -= coef * out[i];
+			for(int k=0; k<out->cols(); k++) {
+				(*out)[j][k] = coef * (*out)[i][k];
+			}
 		}
 	}
 }

@@ -142,7 +142,6 @@ Mat Mat::operator*(const Mat& mat) const {
 }
 
 
-
 /**
 *get number of rows
 */
@@ -164,3 +163,4 @@ void Mat::resize(int r, int c) {
 		rowData[i].resize(c);
 	}
 }
+
