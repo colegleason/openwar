@@ -1,0 +1,24 @@
+﻿Build started 12/5/2013 9:20:35 PM.
+     1>Project "C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\OpenWarCV.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /nologo /W1 /WX- /Od /Oy- /D _LIB /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"pch.h" /Fp"ARM\Debug\OpenWarCV.pch" /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt pch.cpp
+         pch.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\CL.exe /c /AI"C:\Program Files (x86)\Windows Phone Kits\8.0\Windows Metadata" /Zi /nologo /W1 /WX- /Od /Oy- /D _LIB /D WINAPI_FAMILY=WINAPI_FAMILY_PHONE_APP /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"pch.h" /Fp"ARM\Debug\OpenWarCV.pch" /Fo"ARM\Debug\\" /Fd"ARM\Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Feature2d.cpp ImgOps.cpp Mat.cpp MatOps.cpp
+         MatOps.cpp
+         Mat.cpp
+         ImgOps.cpp
+         Feature2d.cpp
+     1>c:\users\cole\documents\github\openwar\openwarexample\openwarexample\openwarcv\openwarcv\Feature2d.h(9): warning C4091: 'typedef ' : ignored on left of 'Feature2d::Point' when no variable is declared
+         Generating Code...
+       Lib:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\WPSDK\WP80\bin\x86_arm\Lib.exe /OUT:"C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\ARM\Debug\OpenWarCV\OpenWarCV.lib" /NOLOGO /MACHINE:ARM ARM\Debug\Feature2d.obj
+         ARM\Debug\ImgOps.obj
+         ARM\Debug\Mat.obj
+         ARM\Debug\MatOps.obj
+         ARM\Debug\pch.obj
+         OpenWarCV.vcxproj -> C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\ARM\Debug\OpenWarCV\OpenWarCV.lib
+     1>Done Building Project "C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARCV\OpenWarCV\OpenWarCV.vcxproj" (Rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.09

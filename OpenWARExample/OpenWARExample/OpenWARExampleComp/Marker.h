@@ -22,6 +22,10 @@ public:
 
 	void AddModel(Model^ nmodel);
 
+	bool previous = false;
+	Mat originalImage;
+	Mat previousImage;
+
 internal:
 	ID3D11Texture2D* GetTexture()
 	{

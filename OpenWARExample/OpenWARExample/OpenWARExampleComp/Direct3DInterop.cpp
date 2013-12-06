@@ -128,4 +128,56 @@ ID3D11Texture2D* Direct3DInterop::GetTexture()
 	return m_marker->GetTexture();
 }
 
+void Direct3DInterop::update(byte frame[], int w, int h) {
+	vector<Marker> markers;
+	markers.push_back(m_marker);
+
+	Mat m = Mat((char*)frame, h, w);
+	Feature2d::KeyPoints kp;	
+	Feature2d::Descriptors desc;
+	Feature2d::harrisCorners(m, &kp, &desc);
+	for (std::vector<Marker>::iterator mark = markers.begin(); mark != markers.end(); mark++) {
+		Feature2d::KeyPoints mkp;
+		Feature2d::Descriptors mdesc;
+		if (!mark->previous) {
+			Feature2d::harrisCorners(mark->orignalImage, &(mkp), &(mdesc));
+			bool found = false;
+			int iters = 0;
+			Mat searchIm = Mat(m);
+			while (iters < 16) {
+				found = searchScene(searchIm, *mark, kp, mkp, desc, mdesc);
+				Mat newSearch;
+				ImgOps::imresize(searchIm, 0.75, &newSearch);
+				if (found) break;
+				searchIm = newSearch;
+				iters++;
+			}
+		}
+		else {
+			Feature2d::harrisCorners(mark->previousImage, &(mkp), &(mdesc));
+			bool result = searchScene(m, *mark, kp, mkp, desc, mdesc);
+			if (!result) {
+				mark->previous = false;
+			}
+		}
+	}
 }
+
+bool Direct3DInterop::searchScene(Mat m, Marker mark, Feature2d::KeyPoints kp, Feature2d::KeyPoints mkp,
+	Feature2d::Descriptors desc, Feature2d::Descriptors mdesc) {
+	vector<int> index1, index2;
+	Feature2d::KeyPoints kp2, mkp2;
+	Feature2d::match(mdesc, desc, MATCH_TOLERANCE, &index1, &index2);
+	Feature2d::filter(mkp, index1, &mkp2);
+	Feature2d::filter(kp, index2, &kp2);
+	int numMatches;
+	Mat H;
+	Feature2d::findHomographyRANSAC(mkp, kp, RANSAC_THRESHOLD, &H, &numMatches);
+	if (numMatches >= NUM_MATCH_THRESHOLD) {
+		mark.previous = true;
+		Feature2d::crop(m, kp, &(mark.previousImage));
+	}
+
+}
+}
+
