@@ -12,6 +12,7 @@ using Microsoft.Devices;
 using Microsoft.Xna.Framework.Media;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Threading;
 
 namespace OpenWARExample
 {
@@ -22,6 +23,9 @@ namespace OpenWARExample
         PhotoCamera cam;
         MediaLibrary library = new MediaLibrary();
         private Direct3DInterop m_d3dInterop = null;
+        private Thread ARGBFramesThread;
+        private bool pumpARGBFrames;
+        private static ManualResetEvent pauseFramesEvent = new ManualResetEvent(true);
 
         // Holds the current flash mode.
         private string currentFlashMode;
@@ -59,6 +63,12 @@ namespace OpenWARExample
 
                 //Set the VideoBrush source to the camera.
                 viewfinderBrush.SetSource(cam);
+
+                pumpARGBFrames = true;
+                ARGBFramesThread = new System.Threading.Thread(PumpARGBFrames);
+
+                // Start pump.
+                ARGBFramesThread.Start();
             }
             else
             {
@@ -274,6 +284,39 @@ namespace OpenWARExample
                 // Hook-up native component to DrawingSurface
                 DrawingSurface.SetContentProvider(m_d3dInterop.CreateContentProvider());
                 DrawingSurface.SetManipulationHandler(m_d3dInterop);
+            }
+        }
+
+        // ARGB frame pump
+        void PumpARGBFrames()
+        {
+            // Create capture buffer.
+            int[] ARGBPx = new int[(int)cam.PreviewResolution.Width * (int)cam.PreviewResolution.Height];
+
+            try
+            {
+                PhotoCamera phCam = (PhotoCamera)cam;
+
+                while (pumpARGBFrames)
+                {
+                    pauseFramesEvent.WaitOne();
+
+                    // Copies the current viewfinder frame into a buffer for further manipulation.
+                    phCam.GetPreviewBufferArgb32(ARGBPx);
+
+                    // DO STUFF HERE
+
+                    pauseFramesEvent.Reset();
+                }
+
+            }
+            catch (Exception e)
+            {
+                this.Dispatcher.BeginInvoke(delegate()
+                {
+                    // Display error message.
+                    txtDebug.Text = e.Message;
+                });
             }
         }
     }

@@ -12,3 +12,10 @@ C:\Users\Cole\Downloads\openwar-master\openwar-master\OpenWARExample\ARM\Debug\O
 ^C:\Users\Cole\Downloads\openwar-master\openwar-master\OpenWARExample\OpenWARExample\OpenWARExampleComp\OpenWARExampleComp.vcxproj
 C:\Users\Cole\Downloads\openwar-master\openwar-master\OpenWARExample\ARM\Debug\OpenWARExampleComp\OpenWARExampleComp.lib
 C:\Users\Cole\Downloads\openwar-master\openwar-master\OpenWARExample\ARM\Debug\OpenWARExampleComp\OpenWARExampleComp.exp
+^SimplePixelShader.hlsl
+^SimpleVertexShader.hlsl
+C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\ARM\Debug\OpenWARExampleComp\SimplePixelShader.cso
+C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\ARM\Debug\OpenWARExampleComp\SimpleVertexShader.cso
+^C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\OpenWARExample\OpenWARExampleComp\OpenWARExampleComp.vcxproj
+C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\ARM\Debug\OpenWARExampleComp\OpenWARExampleComp.lib
+C:\Users\Cole\Documents\GitHub\openwar\OpenWARExample\ARM\Debug\OpenWARExampleComp\OpenWARExampleComp.exp
