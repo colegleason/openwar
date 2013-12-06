@@ -3,7 +3,7 @@
 
 namespace Feature2d {
 
-typedef struct Point {
+struct Point {
 	double x;
 	double y;
 };
@@ -41,6 +41,14 @@ void harrisCorners(Mat& a, KeyPoints * keyspoints, Descriptors * decriptors);
 */
 void projectiveTransform(KeyPoints& a, Mat& H, KeyPoints* result);
 
-void transform(Point& a, Mat& H, Mat::Row *row);
+/**
+* given a set of key points and a list of indexes, extract the key points with the given indexes
+*/
+void filter(const KeyPoints& a, vector<int>& indexes, KeyPoints* result);
+
+/**
+*given a matrix and a set of key points, extract the matrix containing key points
+*/
+void crop(Mat& mat, const KeyPoints& kp, Mat* result);
 
 };

@@ -17,6 +17,16 @@ double ssd(Mat& a, Mat& b, int x = 0, int y = 0);
 void svd(Mat& a, Mat*destU, Mat*destS, Mat*destV);
 
 /**
+* deflate:
+* Reduces the matrix by eliminating the first row and column
+* input: 
+* a is the original matrix to be deflated
+* output
+* dest is the deflated matrix
+*/
+void deflate(Mat&a, Mat*dest);
+
+/**
 *performs matrix multiplication Result = AB
 */
 void multi(Mat& a, Mat&b, Mat* result);
@@ -44,17 +54,17 @@ void GaussianDist(int size, double sigma, Mat* result);
 /**
 *power iteration method for computing eigenvectors
 */
-void powerIteration(Mat* A, Mat* x, Mat* eigenv);
+void powerIteration(Mat& A, Mat& x, Mat* eigenv);
 
 /**
 *function for normalizing a vector
 */
-void normalize(Mat* in, Mat* out);
+double normalize(Mat& in);
 
 /*
 *calculate the inverse of a square matrix
 */
-void inverse(Mat* in, Mat* out);
+void inverse(Mat& in, Mat* out);
 
 //TODO::add any conversion frunctions from Mat to other useful formats
 
