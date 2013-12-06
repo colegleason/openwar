@@ -104,7 +104,7 @@ void identity(int r, int c, Mat* result) {
 	}
 }
 
-void GaussianDist(int size, double sigma, Mat * gauss)
+void GaussianDist(int size, double sigma, Mat * result)
 {
 	//parameter check
 	if(size == 0 || sigma == 0)
@@ -114,7 +114,7 @@ void GaussianDist(int size, double sigma, Mat * gauss)
 	if(size % 2 == 0)
 		size++;
 
-	gauss->resize(size, size);
+	result->resize(size, size);
 	int u = size >> 1; //mean
 
 	//P(x) = (1/(sigma * sqrt(2pi))) * exp(-(x-u)^2/(2*sigma))
@@ -122,11 +122,62 @@ void GaussianDist(int size, double sigma, Mat * gauss)
 	{
 		for(int y = 0 ; y < size ; ++y)
 		{
-			(*gauss)[x][y] = (1/(sigma * sqrt(2 * PI))) * exp(-((x-u)*(x-u))/(2*sigma));
-			(*gauss)[x][y] *= (1/(sigma * sqrt(2 * PI))) * exp(-((y-u)*(y-u))/(2*sigma));
+			(*result)[x][y] = (1/(sigma * sqrt(2 * PI))) * exp(-((x-u)*(x-u))/(2*sigma));
+			(*result)[x][y] *= (1/(sigma * sqrt(2 * PI))) * exp(-((y-u)*(y-u))/(2*sigma));
 		}
 	}
 	
+}
+
+void powerIteration(Mat* A, Mat* x, Mat* eigenv)
+{
+	//have the initial value
+	Mat* x_o = x;
+
+	x = A * x;
+
+	//compute the difference
+	Mat* diff = x - x_o;
+
+	double maxval = normalize(diff)
+	int count = 0;
+
+	while(maxval > 1e-6 && count < 1000)
+	{
+		x_o = x;
+		x = A * x;
+		x = x / normalize(x);
+		diff = x - xo
+		maxval = normalize(diff);
+		count++;
+	}
+}
+
+/* normalize takes a Mat* with one row only (a vector)
+*/
+double normalize(Mat* in)
+{
+	//this is not a vector
+	if(in.rows() != 1)
+		return 0.0;
+	
+	double sum = 0.0;
+
+	//add the square of all the values in the vector
+	for(int i = 0 ; i < in.cols() ; ++i)
+	{
+		sum += (in[0][i] * in[0][i]);
+	}
+		
+	//take the sqrt and divide all
+	sum = 1/sqrt(sum);
+
+	return sum;
+}
+
+void inverse(Mat* in, Mat* out)
+{
+	out = identity(
 }
 
 //TODO::add any conversion frunctions from Mat to other useful formats
