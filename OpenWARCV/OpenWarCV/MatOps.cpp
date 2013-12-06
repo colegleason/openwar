@@ -177,7 +177,27 @@ double normalize(Mat* in)
 
 void inverse(Mat* in, Mat* out)
 {
-	out = identity(
+	if(in.rows() != in.cols())
+		return;
+
+	out->resize(in.rows(), in.cols());
+
+	//make our out matrix an identity
+	identity(in.rows(), in.cols(), out);
+
+	for(int i = 0 ; i < out.rows() ; ++i)
+	{
+		double factor = in[i][i];
+		out /= factor;
+	
+		for(int j = 0 ; j < out.rows() ; ++j)
+		{
+			if(i == j)	continue;
+			double coef = in[j][i];
+			out[j] -= coef * out[i];
+		}
+	}
 }
+
 
 //TODO::add any conversion frunctions from Mat to other useful formats

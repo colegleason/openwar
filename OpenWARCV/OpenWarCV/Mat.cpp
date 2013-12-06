@@ -14,6 +14,10 @@ Mat::Mat() {
 */
 Mat::Mat(int r, int c) {
 	resize(r,c);
+
+	for(int i = 0 ; i < r ; ++i)
+		for(int j = 0 ; j < c ; ++i)
+			(*this)[i][j] = 0;
 }
 
 /**
