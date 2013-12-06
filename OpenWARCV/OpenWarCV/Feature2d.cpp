@@ -2,8 +2,26 @@
 #include "pch.h"
 #include "Feature2d.h"
 #include "MatOps.h"
+#include "ImgOps.h"
+#include <algorithm>
 
 using namespace MatOps;
+
+bool Feature2d::compAscX(const Point& p, const Point& p2) {
+	return p.x < p2.x;
+}
+
+bool Feature2d::compDescX(const Point& p, const Point& p2) {
+	return !compAscX(p, p2);
+}
+
+bool Feature2d::compAscY(const Point& p, const Point& p2) {
+	return p.y < p2.y;
+}
+
+bool Feature2d::compDescY(const Point& p, const Point& p2) {
+	return !compAscY(p, p2);
+}
 
 /**
 *uses RANSAC to compute map from a onto b with maximum number of points
@@ -154,7 +172,71 @@ void Feature2d::match(Descriptors& a, Descriptors& b, double tol,  vector<int> *
 /**
 *performs harris cornder detections, and returns the key points of the image, and descriptors
 */
-void Feature2d::harrisCorners(Mat& a, KeyPoints * keyspoints, Descriptors * decriptors){
+void Feature2d::harrisCorners(Mat& im, double alpha, int N, KeyPoints * keypoints, Descriptors * decriptors){
+
+Mat har;
+{
+	//ensure the stack is freed after computing harris responses
+	Mat gfil, efil, imblur, Ix, Iy, Ixx, Iyy, Ixy, Ixxyy;
+
+	GaussianDist(7, 1, &gfil); //smoothing filter
+	ImgOps::imfilter(im, gfil, &imblur); // smooth image
+	//compute horizontal gradient
+	ImgOps::edgeFilter(false, &efil);
+	ImgOps::imfilter(imblur, efil, &Ix);
+	//compute vertical gradient
+	ImgOps::edgeFilter(true, &efil);
+	ImgOps::imfilter(imblur, efil, &Ix);
+	ImgOps::imfilter(Ix*Ix, gfil, &Ixx); // compute smoothed x-gradient sq
+	ImgOps::imfilter(Iy*Iy, gfil, &Iyy); // compute smoothed y-gradient sq
+	ImgOps::imfilter(Ix*Iy, gfil, &Ixy); 
+	Ixxyy = Ixx+Iyy;
+	har = (Ixx * Iyy) - (Ixy * Ixy) - alpha*(Ixxyy * Ixxyy); // cornerness
+}
+
+//ensure local variables are freed as soon as possible
+{
+	vector<Point> tempKey;
+	vector<Point> values;
+	// get local maxima within 7x7 window
+	for(int i=7; i<im.rows()-7; i+=7) {
+		for(int j=7; j<im.cols()-7; j+=7) {
+			int max = 0;
+			int indy = 0;
+			int indx = 0;
+			for(int y=0; y<7; y++) {
+				for(int x=0; x<7; x++) {
+					if(har[y][x] > max) {
+						max = har[y][x];
+						indy = y;
+						indx = x;
+					}
+				}
+			}
+			tempKey.push_back(Point(indx, indy));
+			values.push_back(Point(max, values.size()));
+		}
+	}
+
+	//sort values by response
+	std::sort(values.begin(), values.end(), &Feature2d::compDescX);
+	//copy key points in sorted order
+	keypoints->resize(values.size());
+	for(int i=0; i<values.size(); i++) {
+		(*keypoints)[i] = tempKey[values[i].y]; 
+	}
+
+}
+
+if(N < keypoints->size()) {
+	keypoints->resize(N);
+}
+//extract descriptors
+decriptors->resize(keypoints->size());
+for(int i=0; i<keypoints->size(); i++) {
+	Point& p = (*keypoints)[i];
+	crop(im, p.x-7, p.y-7, p.x+7, p.x+7, &(*decriptors)[i]);
+}
 
 }
 
@@ -204,6 +286,13 @@ void Feature2d::crop(Mat& mat, const KeyPoints& kp, Mat* result) {
 	y = max(0, y-8);
 	x2 = min(mat.cols(), x2+8);
 	y2 = min(mat.rows(), y2+8);
+	crop(mat, x, y, x2, y2, result);
+}
+
+/**
+*given a matrix and a set of bounds, extract the matrix within the bounds
+*/
+void Feature2d::crop(Mat& mat, int x, int y, int x2, int y2, Mat* result) {
 	result->resize(y2-y, x2-x);
 	for(int i=0; i<y2-y; i++) {
 		for(int j=0; j<x2-x; j++) {

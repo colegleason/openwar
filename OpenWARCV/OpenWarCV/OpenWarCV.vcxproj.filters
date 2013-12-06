@@ -12,6 +12,7 @@
     <ClCompile Include="ImgOps.cpp" />
     <ClCompile Include="MatOps.cpp" />
     <ClCompile Include="Feature2d.cpp" />
+    <ClCompile Include="FindHomographyTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />

@@ -6,7 +6,23 @@ namespace Feature2d {
 struct Point {
 	double x;
 	double y;
+
+	Point() {
+		x = 0;
+		y = 0;
+	}
+
+	Point(double x, double y) {
+		this->x = x;
+		this->y = y;
+	}
 };
+
+bool compAscX(const Point& p, const Point& p2);
+bool compDescX(const Point& p, const Point& p2);
+bool compAscY(const Point& p, const Point& p2);
+bool compDescY(const Point& p, const Point& p2);
+
 
 typedef vector<Point> KeyPoints;
 typedef vector<Mat> Descriptors;
@@ -34,7 +50,7 @@ void match(Descriptors& a, Descriptors& b, double tol,  vector<int> * indexesA, 
 /**
 *performs harris cornder detections, and returns the key points of the image, and descriptors
 */
-void harrisCorners(Mat& a, KeyPoints * keyspoints, Descriptors * decriptors);
+void harrisCorners(Mat& a, double alpha, int N, KeyPoints * keyspoints, Descriptors * decriptors);
 
 /**
 *applies H to the plane of a onto the plane of b, returns the new points in result
@@ -50,5 +66,8 @@ void filter(const KeyPoints& a, vector<int>& indexes, KeyPoints* result);
 *given a matrix and a set of key points, extract the matrix containing key points
 */
 void crop(Mat& mat, const KeyPoints& kp, Mat* result);
+
+void crop(Mat& mat, int x, int y, int x2, int y2, Mat* result);
+
 
 };

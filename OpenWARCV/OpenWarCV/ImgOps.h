@@ -13,4 +13,9 @@ void imfilter(Mat& img, Mat& filter, Mat* result);
 */
 void imresize(Mat& img, float ratio, Mat* result);
 
+/**
+*creates an edge filter, either vertical or horizontal
+*/
+void edgeFilter(bool vertical, Mat* result);
+
 };

@@ -44,3 +44,22 @@ void imresize(Mat& img, float ratio, Mat* result){
     imfilter(temp, fil, result); 
 	
 }
+
+/**
+*creates an edge filter, either vertical or horizontal
+*/
+void edgeFilter(bool vertical, Mat* result) {
+	result->resize(3,3);
+	for(int i=0; i<3; i++) {
+		for(int j=0; j<3; j++) {
+			(*result)[i][j] = 0;
+		}
+	}
+	if(vertical) {
+		(*result)[1][0] = 1;
+		(*result)[1][2] = -1;
+	} else {
+		(*result)[0][1] = 1;
+		(*result)[2][1] = -1;
+	}
+}
