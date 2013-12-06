@@ -25,7 +25,7 @@ void Feature2d::findHomography(KeyPoints& a, KeyPoints& b, Mat* H){
 *returns the indexes of a that match the index of b
 */
 void Feature2d::match(Descriptors& a, Descriptors& b,  vector<int> * indexesA, vector<int> * indexesB){
-
+	
 }
 
 /**

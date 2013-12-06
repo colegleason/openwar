@@ -37,26 +37,119 @@ Mat::Row& Mat::operator[](int r) {
 	return this->rowData[r];
 }
 
-Mat::Mat Mat::operator=(const Mat &rhs)
+Mat& Mat::operator=(const Mat &rhs)
 {
-	Row = rhs.Row;
-	//should we iterate thru vector?
-	rowData = rhs.rowData;
-	
+	if (this == &rhs) {
+        return *this;
+	}
+
+	this->rowData = rhs.rowData;
 	return *this;
 }
 
 /**
+*allow scalar subtraction operations to be applied to matrix
+*/
+Mat Mat::operator-(double val) const {
+	Mat ret = Mat(this->rows(), this->cols());
+	for(int i=0; i<this->rows(); i++) {
+		for(int j=0; j<this->cols(); j++) {
+			ret[i][j] = this->rowData[i][j] - val;
+		}
+	}
+	return ret;
+}
+static Mat operator-(double val, const Mat& mat) {
+	Mat ret = Mat(mat.rows(), mat.cols());
+	for(int i=0; i<mat.rows(); i++) {
+		for(int j=0; j<mat.cols(); j++) {
+			ret[i][j] = val - mat.rowData[i][j];
+		}
+	}
+	return ret;
+}
+Mat Mat::operator-(const Mat& mat) const {
+	if(mat.rows() != this->rows() || mat.cols() != this->cols()) {
+		throw "operator- only applies to matricies of the same size";
+	}
+	Mat ret = Mat(mat.rows(), mat.cols());
+	for(int i=0; i<mat.rows(); i++) {
+		for(int j=0; j<mat.cols(); j++) {
+			ret[i][j] = this->rowData[i][j] - mat.rowData[i][j];
+		}
+	}
+	return ret;
+}
+
+/**
+*allow scalar addition to be applied to matrix
+*/
+Mat Mat::operator+(double val) const {
+	Mat ret = Mat(this->rows(), this->cols());
+	for(int i=0; i<this->rows(); i++) {
+		for(int j=0; j<this->cols(); j++) {
+			ret[i][j] = this->rowData[i][j] + val;
+		}
+	}
+	return ret;
+}
+static Mat operator+(double num, const Mat& mat) {
+	return mat+num;
+}
+Mat Mat::operator+(const Mat& mat) const {
+	if(mat.rows() != this->rows() || mat.cols() != this->cols()) {
+		throw "operator+ only applies to matricies of the same size";
+	}
+	Mat ret = Mat(mat.rows(), mat.cols());
+	for(int i=0; i<mat.rows(); i++) {
+		for(int j=0; j<mat.cols(); j++) {
+			ret[i][j] = this->rowData[i][j] + mat.rowData[i][j];
+		}
+	}
+	return ret;
+}
+
+/**
+*allow scalar multiplication to be applied to matrix
+*/
+Mat Mat::operator*(double val) const {
+	Mat ret = Mat(this->rows(), this->cols());
+	for(int i=0; i<this->rows(); i++) {
+		for(int j=0; j<this->cols(); j++) {
+			ret[i][j] = this->rowData[i][j] * val;
+		}
+	}
+	return ret;
+}
+Mat operator*(double num, const Mat& mat) {
+	return mat*num;
+}
+Mat Mat::operator*(const Mat& mat) const {
+	if(mat.rows() != this->rows() || mat.cols() != this->cols()) {
+		throw "operator* only applies to matricies of the same size";
+	}
+	Mat ret = Mat(this->rows(), this->cols());
+	for(int i=0; i<this->rows(); i++) {
+		for(int j=0; j<this->cols(); j++) {
+			ret[i][j] = this->rowData[i][j] * mat.rowData[i][j];
+		}
+	}
+	return ret;
+}
+
+
+
+/**
 *get number of rows
 */
-int Mat::rows() {
+int Mat::rows() const {
 	return this->rowData.size();
 }
 
 /**
 *get number of columns
 */
-int Mat::cols() {
+int Mat::cols() const{
 	return this->rowData[0].size();
 }
 

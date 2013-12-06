@@ -30,16 +30,40 @@ public:
 	*/
 	Row& Mat::operator[](int r); 
 
-	Mat Mat::operator=(const Mat &rhs);
+	/**
+	*allow copy with =
+	*/
+	Mat& Mat::operator=(const Mat &rhs);
+
+	/**
+	*allow scalar subtraction operations to be applied to matrix
+	*/
+	Mat Mat::operator-(double val) const; 
+	friend Mat operator-(double val, const Mat& mat);
+	Mat Mat::operator-(const Mat& val) const; 
+
+	/**
+	*allow scalar addition to be applied to matrix
+	*/
+	Mat Mat::operator+(double num) const;
+	friend Mat operator+(double num, const Mat& mat);
+	Mat Mat::operator+(const Mat& val) const; 
+
+	/**
+	*allow scalar multiplication to be applied to matrix
+	*/
+	Mat Mat::operator*(double num) const;
+	friend Mat operator*(double num, const Mat& mat);
+	Mat Mat::operator*(const Mat& val) const;
 
 	/**
 	*get number of rows
 	*/
-	int rows();
+	int rows() const;
 	/**
 	*get number of columns
 	*/
-	int cols();
+	int cols() const;
 
 	/**
 	*resizes matrix to rxc
